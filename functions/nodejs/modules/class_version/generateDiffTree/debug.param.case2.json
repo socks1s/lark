@@ -1,0 +1,43 @@
+{
+  "params": {
+    "oldData": {
+      "user": {
+        "name": "李四",
+        "email": "lisi@example.com",
+        "profile": {
+          "lastLogin": "2024-01-01T10:00:00Z",
+          "preferences": {
+            "language": "zh-CN",
+            "timezone": "Asia/Shanghai"
+          }
+        }
+      },
+      "metadata": {
+        "timestamp": "2024-01-01T10:00:00Z",
+        "version": 1
+      }
+    },
+    "newData": {
+      "user": {
+        "name": "李四",
+        "email": "lisi@newdomain.com",
+        "profile": {
+          "lastLogin": "2024-01-02T15:30:00Z",
+          "preferences": {
+            "language": "en-US",
+            "timezone": "Asia/Shanghai"
+          }
+        }
+      },
+      "metadata": {
+        "timestamp": "2024-01-02T15:30:00Z",
+        "version": 2
+      }
+    },
+    "ignoreFields": [
+      "user.profile.lastLogin",
+      "metadata.timestamp"
+    ]
+  },
+  "context": {}
+}

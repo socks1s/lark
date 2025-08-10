@@ -1,0 +1,84 @@
+{
+  "apiID": "package_facdb4__c__function_moi4kukgcrxii",
+  "apiName": "calculateFreightAllocation",
+  "label": {
+    "zh_CN": "运费均摊计算",
+    "en_US": "Freight Allocation Calculation"
+  },
+  "description": {
+    "zh_CN": "根据总重量和费率计算各分票货物的运费分摊金额",
+    "en_US": "Calculate freight allocation amount for each shipment based on total weight and rate"
+  },
+  "longTaskMode": false,
+  "frontendSDKInvokable": true,
+  "input": [
+    {
+      "key": "totalWeight",
+      "type": "Number",
+      "label": "总重量",
+      "required": true,
+      "description": "货物的总重量，单位为kg"
+    },
+    {
+      "key": "rate",
+      "type": "Number",
+      "label": "费率",
+      "required": true,
+      "description": "每kg的运费价格"
+    },
+    {
+      "key": "weightList",
+      "type": "List",
+      "label": "重量明细",
+      "required": true,
+      "description": "各分票货物的重量列表，单位为kg",
+      "listItem": {
+        "type": "Number"
+      }
+    },
+    {
+      "key": "volumeList",
+      "type": "List",
+      "label": "体积明细",
+      "required": true,
+      "description": "各分票货物的体积列表",
+      "listItem": {
+        "type": "Number"
+      }
+    },
+    {
+      "key": "allocationMethod",
+      "type": "Text",
+      "required": true,
+      "label": "分摊方式",
+      "description": "按重量或体积分摊运费",
+      "options": [
+        {
+          "label": "按重量",
+          "value": "weight"
+        },
+        {
+          "label": "按体积",
+          "value": "volume"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "key": "allocatedAmounts",
+      "type": "List",
+      "label": "分摊金额",
+      "description": "各分票货物分摊的运费金额列表",
+      "listItem": {
+        "type": "Number"
+      }
+    },
+    {
+      "key": "totalFreight",
+      "type": "Number",
+      "label": "总运费",
+      "description": "计算得出的总运费金额"
+    }
+  ]
+}

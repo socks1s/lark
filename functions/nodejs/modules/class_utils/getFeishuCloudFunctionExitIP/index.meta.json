@@ -1,0 +1,100 @@
+{
+  "apiID": "function_getfeishuexitip",
+  "apiName": "getFeishuCloudFunctionExitIP",
+  "label": {
+    "zh_CN": "获取飞书云函数出口IP",
+    "en_US": "Get Feishu Cloud Function Exit IP"
+  },
+  "description": {
+    "zh_CN": "检测飞书云函数的出口IP地址，用于添加到第三方服务（如领星ERP）的IP白名单中。支持多个IP检测服务，提供详细的检测结果和白名单建议。",
+    "en_US": "Detect the exit IP address of Feishu cloud functions for adding to third-party service IP whitelists (such as Lingxing ERP). Supports multiple IP detection services and provides detailed detection results and whitelist suggestions."
+  },
+  "input": [
+    {
+      "key": "testUrls",
+      "type": "JSON",
+      "label": "自定义IP检测服务URL列表",
+      "required": false,
+      "description": "自定义的IP检测服务URL列表（可选）"
+    },
+    {
+      "key": "includeHeaders",
+      "type": "Boolean",
+      "label": "包含响应头信息",
+      "required": false,
+      "description": "是否在结果中包含HTTP响应头信息（可选，默认false）"
+    }
+  ],
+  "output": [
+    {
+      "key": "success",
+      "type": "Boolean",
+      "label": "检测是否成功",
+      "required": true,
+      "description": "检测是否成功"
+    },
+    {
+      "key": "timestamp",
+      "type": "Text",
+      "label": "检测时间戳",
+      "required": true,
+      "description": "检测时间戳"
+    },
+    {
+      "key": "summary",
+      "type": "JSON",
+      "label": "检测结果摘要",
+      "required": true,
+      "description": "检测结果摘要，包含服务数量、成功率、检测到的IP等"
+    },
+    {
+      "key": "whitelistSuggestion",
+      "type": "JSON",
+      "label": "白名单建议",
+      "required": true,
+      "description": "白名单建议，包含IP列表和不同格式的输出"
+    },
+    {
+      "key": "detailedResults",
+      "type": "JSON",
+      "label": "详细检测结果",
+      "required": true,
+      "description": "详细的检测结果，包含每个服务的响应情况"
+    },
+    {
+      "key": "recommendations",
+      "type": "JSON",
+      "label": "使用建议",
+      "required": true,
+      "description": "使用建议和注意事项"
+    }
+  ],
+  "exception": [
+    {
+      "errorCode": "NETWORK_ERROR",
+      "errorMessage": {
+        "zh_CN": "网络请求失败",
+        "en_US": "Network request failed"
+      }
+    },
+    {
+      "errorCode": "INVALID_RESPONSE",
+      "errorMessage": {
+        "zh_CN": "无效的响应格式",
+        "en_US": "Invalid response format"
+      }
+    },
+    {
+      "errorCode": "TIMEOUT_ERROR",
+      "errorMessage": {
+        "zh_CN": "请求超时",
+        "en_US": "Request timeout"
+      }
+    }
+  ],
+  "tags": ["IP检测", "网络工具", "白名单", "领星ERP", "出口IP"],
+  "version": "1.0.0",
+  "author": "AI Assistant",
+  "createTime": "2024-12-19",
+  "updateTime": "2024-12-19"
+}

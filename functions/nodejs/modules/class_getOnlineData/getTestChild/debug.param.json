@@ -1,0 +1,146 @@
+{
+  "params": {
+    "objectApiName": "testChild",
+    "limit": 10,
+    "selectFields": ["_id", "_createdAt", "_updatedAt","forwarderOrder"],
+    "orderBy": "_id",
+    "orderDirection": "asc"
+  },
+  "context": {},
+  "_examples": {
+    "基础子表查询": {
+      "params": {
+        "objectApiName": "testChild",
+        "limit": 5
+      }
+    },
+    "按父记录ID查询子表": {
+      "params": {
+        "objectApiName": "testChild",
+        "parentObjectApiName": "testMain",
+        "parentRecordIds": "1837438584997912",
+        "includeParentInfo": true
+      }
+    },
+    "按多个父记录ID查询子表": {
+      "params": {
+        "objectApiName": "testChild",
+        "parentObjectApiName": "testMain",
+        "parentRecordIds": ["1837438584997912", "1837702753032231"],
+        "selectFields": ["_id", "parentId", "childName", "childValue"],
+        "includeParentInfo": true
+      }
+    },
+    "按子表记录ID查询单条": {
+      "params": {
+        "objectApiName": "testChild",
+        "parentObjectApiName": "testMain",
+        "recordIds": "123456789",
+        "returnSingle": true,
+        "includeParentInfo": true
+      }
+    },
+    "按子表记录ID数组查询多条": {
+      "params": {
+        "objectApiName": "testChild",
+        "recordIds": ["123456789", "987654321", "456789123"],
+        "selectFields": ["_id", "parentId", "childName", "childValue", "_createdAt"]
+      }
+    },
+    "指定字段查询子表": {
+      "params": {
+        "objectApiName": "testChild",
+        "parentObjectApiName": "testMain",
+        "selectFields": ["_id", "parentId", "childName", "childValue", "_createdAt"],
+        "limit": 20,
+        "orderBy": "_createdAt",
+        "orderDirection": "desc"
+      }
+    },
+    "条件查询子表": {
+      "params": {
+        "objectApiName": "testChild",
+        "parentObjectApiName": "testMain",
+        "conditions": {
+          "childValue": { "$gt": 100 },
+          "_createdAt": {
+            "$gte": "2024-01-01T00:00:00Z"
+          }
+        },
+        "selectFields": ["_id", "parentId", "childName", "childValue", "_createdAt"],
+        "limit": 50,
+        "includeParentInfo": true
+      }
+    },
+    "分页查询子表": {
+      "params": {
+        "objectApiName": "testChild",
+        "parentObjectApiName": "testMain",
+        "limit": 10,
+        "offset": 20,
+        "orderBy": "childName",
+        "orderDirection": "asc",
+        "includeParentInfo": false
+      }
+    },
+    "复杂条件查询子表": {
+      "params": {
+        "objectApiName": "testChild",
+        "parentObjectApiName": "testMain",
+        "conditions": {
+          "$or": [
+            { "childValue": { "$gt": 500 } },
+            { "childName": { "$like": "%test%" } }
+          ],
+          "_createdAt": {
+            "$gte": "2024-01-01T00:00:00Z",
+            "$lte": "2024-12-31T23:59:59Z"
+          }
+        },
+        "selectFields": ["_id", "parentId", "childName", "childValue", "_createdAt"],
+        "limit": 30,
+        "orderBy": "_createdAt",
+        "orderDirection": "desc",
+        "includeParentInfo": true
+      }
+    },
+    "获取最新子表记录": {
+      "params": {
+        "objectApiName": "testChild",
+        "parentObjectApiName": "testMain",
+        "limit": 1,
+        "orderBy": "_createdAt",
+        "orderDirection": "desc",
+        "returnSingle": true,
+        "includeParentInfo": true
+      }
+    },
+    "特定父记录的最新子表记录": {
+      "params": {
+        "objectApiName": "testChild",
+        "parentObjectApiName": "testMain",
+        "parentRecordIds": "1837438584997912",
+        "limit": 1,
+        "orderBy": "_createdAt",
+        "orderDirection": "desc",
+        "returnSingle": true,
+        "includeParentInfo": true
+      }
+    },
+    "父子关联条件查询": {
+      "params": {
+        "objectApiName": "testChild",
+        "parentObjectApiName": "testMain",
+        "parentRecordIds": ["1837438584997912", "1837702753032231"],
+        "conditions": {
+          "childValue": { "$gte": 100 },
+          "isActive": true
+        },
+        "selectFields": ["_id", "parentId", "childName", "childValue", "isActive", "_createdAt"],
+        "orderBy": "childValue",
+        "orderDirection": "desc",
+        "includeParentInfo": true
+      }
+    }
+  }
+}

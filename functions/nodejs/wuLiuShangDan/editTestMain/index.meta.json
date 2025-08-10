@@ -1,0 +1,82 @@
+{
+  "apiID": "package_facdb4__c__function_aadiqelq3qqku1",
+  "apiName": "editTestMain1",
+  "label": {
+    "zh_CN": "editTestMain1",
+    "en_US": "editTestMain1"
+  },
+  "description": {
+    "zh_CN": "editTestMain",
+    "en_US": "Parse JSON string into JSON object"
+  },
+  "longTaskMode": false,
+  "frontendSDKInvokable": true,
+  "input": [
+    {
+      "key": "mainRecord",
+      "type": "Record",
+      "label": "mainRecord",
+      "required": false,
+      "description": "mainRecord",
+      "objectApiName": "forwarderOrders"
+    },
+    {
+      "key": "childRecordList",
+      "type": "RecordList",
+      "label": "childRecordList",
+      "required": false,
+      "description": "",
+      "objectApiName": "shippingOrders",
+      "fieldApiNames": [
+        "_name",
+        "logisticsOrder",
+        "recordVersion",
+        "shippingOrderId",
+        "est_batch_weight",
+        "est_batch_volume",
+        "est_batch_cartons",
+        "act_batch_weight",
+        "act_batch_volume",
+        "act_batch_cartons",
+        "batch_declaredName",
+        "batch_declaredQty",
+        "batch_declaredUnitPrice",
+        "batch_declaredTotalDutyRate",
+        "batch_dutyFeeUsd",
+        "diff_batch_weight",
+        "diff_batch_volume",
+        "diff_batch_billingQty",
+        "act_batch_allocationRatio",
+        "allocated_weight",
+        "allocated_volume",
+        "allocated_billingQty",
+        "allocated_freightFeeCny",
+        "allocated_dutyFeeCny",
+        "allocated_declarationFeeCny",
+        "allocated_warehouseFeeCny",
+        "allocated_inspectionFeeCny",
+        "allocated_otherFeeCny",
+        "allocated_subtotalCny",
+        "tmp_act_batch_weight",
+        "tmp_act_batch_volume",
+        "tmp_act_batch_cartons",
+        "est_batch_convertedWeight",
+        "act_batch_convertedWeight",
+        "est_batch_weightRatio",
+        "est_batch_convertedVolume",
+        "act_batch_convertedVolume",
+        "est_batch_volumeRatio",
+        "est_batch_billingQty",
+        "act_batch_billingQty",
+        "est_batch_billingQtyRatio",
+        "allocatedAmounts",
+        "_id",
+        "_createdBy",
+        "_createdAt",
+        "_updatedBy",
+        "_updatedAt"
+      ]
+    }
+  ],
+  "output": []
+}

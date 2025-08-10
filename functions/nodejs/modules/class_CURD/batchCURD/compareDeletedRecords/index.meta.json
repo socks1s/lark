@@ -1,0 +1,53 @@
+{
+  "apiID": "function_p356tohc5wf5x",
+  "apiName": "compareDeletedRecords",
+  "label": {
+    "zh_CN": "比较删除记录",
+    "en_US": "Compare Deleted Records"
+  },
+  "description": {
+    "zh_CN": "比较新旧记录列表并找出待删除记录",
+    "en_US": "Compare old and new record lists to find records to be deleted"
+  },
+  "longTaskMode": false,
+  "frontendSDKInvokable": true,
+  "input": [
+    {
+      "key": "oldRecordList",
+      "type": "JSON",
+      "required": true,
+      "label": "旧记录列表",
+      "description": ""
+    },
+    {
+      "key": "newRecordList",
+      "type": "JSON",
+      "required": true,
+      "label": "新记录列表",
+      "description": ""
+    }
+  ],
+  "output": [
+    {
+      "key": "diffRecordList",
+      "type": "JSON",
+      "required": true,
+      "label": "差异记录列表",
+      "description": "包含所有待删除元素的数组"
+    },
+    {
+      "key": "status",
+      "type": "Text",
+      "required": true,
+      "label": "状态",
+      "description": "操作执行状态"
+    },
+    {
+      "key": "message",
+      "type": "Text",
+      "required": true,
+      "label": "消息",
+      "description": "操作结果描述"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "params": {
+    "oldData": {
+      "products": [
+        {
+          "id": 1,
+          "name": "Product A",
+          "description": "This is a very long description that exceeds the normal string length limit for testing purposes",
+          "tags": ["electronics", "mobile"]
+        },
+        {
+          "id": 2,
+          "name": "Product B",
+          "tags": ["books", "education"]
+        }
+      ],
+      "summary": {
+        "total": 2,
+        "categories": ["electronics", "books"]
+      }
+    },
+    "newData": {
+      "products": [
+        {
+          "id": 1,
+          "name": "Product A Updated",
+          "description": "This is a very long description that exceeds the normal string length limit for testing purposes with some changes",
+          "tags": ["electronics", "mobile", "featured"]
+        },
+        {
+          "id": 3,
+          "name": "Product C",
+          "tags": ["clothing", "fashion"]
+        }
+      ],
+      "summary": {
+        "total": 2,
+        "categories": ["electronics", "clothing"]
+      }
+    },
+    "options": {
+      "maxStringLength": 50,
+      "arrayOptimization": "deep",
+      "stringComparison": "strict"
+    }
+  },
+  "context": {}
+}

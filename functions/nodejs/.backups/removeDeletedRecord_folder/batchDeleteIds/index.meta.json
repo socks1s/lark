@@ -1,0 +1,48 @@
+{
+  "apiID": "package_facdb4__c__function_l1pbaflvod014b",
+  "apiName": "batchDeleteIds",
+  "label": {
+    "zh_CN": "batchDeleteIds",
+    "en_US": "Batch Delete IDs"
+  },
+  "description": {
+    "zh_CN": "batchDeleteIds",
+    "en_US": "Delete records in batch by ID list"
+  },
+  "isPublicAPI": false,
+  "frontendSDKInvokable": false,
+  "longTaskMode": false,
+  "input": [
+    {
+      "key": "idList",
+      "type": "List",
+      "required": true,
+      "label": "ID列表",
+      "description": "需要删除的记录ID列表",
+      "listItem": {
+        "type": "BigInt"
+      }
+    },
+    {
+      "key": "objectApiName",
+      "type": "Text",
+      "required": true,
+      "label": "对象ApiName",
+      "description": ""
+    }
+  ],
+  "output": [
+    {
+      "key": "successCount",
+      "type": "BigInt",
+      "label": "成功数量",
+      "description": "成功删除的记录数量"
+    },
+    {
+      "key": "failedCount",
+      "type": "BigInt",
+      "label": "失败数量",
+      "description": "删除失败的记录数量"
+    }
+  ]
+}

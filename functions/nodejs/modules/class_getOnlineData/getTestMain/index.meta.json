@@ -1,0 +1,137 @@
+{
+  "apiID": "function_getTestMain",
+  "apiName": "getTestMain",
+  "label": {
+    "zh_CN": "获取测试数据",
+    "en_US": "Get Test Data"
+  },
+  "description": {
+    "zh_CN": "通用测试数据获取函数，支持获取单条或多条记录，可指定字段、条件、分页等参数，专为测试场景设计",
+    "en_US": "Universal test data retrieval function that supports getting single or multiple records with customizable fields, conditions, pagination, designed for testing scenarios"
+  },
+  "longTaskMode": false,
+  "frontendSDKInvokable": true,
+  "input": [
+    {
+      "key": "objectApiName",
+      "type": "Text",
+      "required": true,
+      "label": "对象API名称",
+      "description": "需要查询的对象API名称，必填参数"
+    },
+    {
+      "key": "recordIds",
+      "type": "JSON",
+      "required": false,
+      "label": "记录ID",
+      "description": "记录ID或ID数组，用于精确查询特定记录"
+    },
+    {
+      "key": "selectFields",
+      "type": "JSON",
+      "required": false,
+      "label": "查询字段",
+      "description": "需要查询的字段列表，字符串数组格式，不填则查询所有字段"
+    },
+    {
+      "key": "conditions",
+      "type": "JSON",
+      "required": false,
+      "label": "查询条件",
+      "description": "查询条件对象，支持复杂查询条件"
+    },
+    {
+      "key": "limit",
+      "type": "Number",
+      "required": false,
+      "label": "限制数量",
+      "description": "限制返回记录数，默认100，最大200"
+    },
+    {
+      "key": "offset",
+      "type": "Number",
+      "required": false,
+      "label": "偏移量",
+      "description": "分页查询的偏移量，默认0"
+    },
+    {
+      "key": "orderBy",
+      "type": "Text",
+      "required": false,
+      "label": "排序字段",
+      "description": "排序字段名，默认按_id排序"
+    },
+    {
+      "key": "orderDirection",
+      "type": "Text",
+      "required": false,
+      "label": "排序方向",
+      "description": "排序方向，'asc'升序或'desc'降序，默认'asc'"
+    },
+    {
+      "key": "returnSingle",
+      "type": "Boolean",
+      "required": false,
+      "label": "返回单条记录",
+      "description": "是否只返回单条记录，默认false返回多条"
+    }
+  ],
+  "output": [
+    {
+      "key": "success",
+      "type": "Boolean",
+      "required": true,
+      "label": "操作成功",
+      "description": "操作是否成功"
+    },
+    {
+      "key": "data",
+      "type": "JSON",
+      "required": false,
+      "label": "查询数据",
+      "description": "查询结果数据，单条记录或记录数组"
+    },
+    {
+      "key": "isSingle",
+      "type": "Boolean",
+      "required": true,
+      "label": "单条记录",
+      "description": "返回的是否为单条记录"
+    },
+    {
+      "key": "totalCount",
+      "type": "Number",
+      "required": true,
+      "label": "总记录数",
+      "description": "符合条件的总记录数"
+    },
+    {
+      "key": "currentCount",
+      "type": "Number",
+      "required": true,
+      "label": "当前记录数",
+      "description": "当前返回的记录数"
+    },
+    {
+      "key": "hasMore",
+      "type": "Boolean",
+      "required": true,
+      "label": "还有更多",
+      "description": "是否还有更多数据可查询"
+    },
+    {
+      "key": "queryInfo",
+      "type": "JSON",
+      "required": false,
+      "label": "查询信息",
+      "description": "查询参数和条件信息"
+    },
+    {
+      "key": "error",
+      "type": "JSON",
+      "required": false,
+      "label": "错误信息",
+      "description": "操作失败时的错误详情"
+    }
+  ]
+}

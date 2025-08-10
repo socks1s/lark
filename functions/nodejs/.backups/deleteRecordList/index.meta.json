@@ -1,0 +1,50 @@
+{
+  "apiID": "package_facdb4__c__function_aadioocdsfqas",
+  "apiName": "deleteRecordList",
+  "label": {
+    "zh_CN": "deleteRecordList",
+    "en_US": ""
+  },
+  "description": {
+    "zh_CN": "deleteRecordList",
+    "en_US": ""
+  },
+  "longTaskMode": false,
+  "frontendSDKInvokable": false,
+  "input": [
+    {
+      "key": "oldList",
+      "type": "RecordList",
+      "label": "oldList",
+      "required": false,
+      "description": "",
+      "objectApiName": "testChild",
+      "fieldApiNames": [
+        "_id"
+      ]
+    },
+    {
+      "key": "newList",
+      "type": "RecordList",
+      "label": "newList",
+      "required": false,
+      "description": "",
+      "objectApiName": "testChild",
+      "fieldApiNames": [
+        "_id"
+      ]
+    }
+  ],
+  "output": [
+    {
+      "key": "delList",
+      "type": "RecordList",
+      "label": "delList",
+      "description": "",
+      "objectApiName": "testChild",
+      "fieldApiNames": [
+        "_id"
+      ]
+    }
+  ]
+}

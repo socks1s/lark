@@ -1,0 +1,14 @@
+{
+  "params": {
+    "access_token": "3b75cd45-ed6b-461b-ab9d-cd1cce821d05",
+    "app_key": "ak_6p4lBDrt1aPPF",
+    "appId": "ak_6p4lBDrt1aPPF",
+    "filters": {
+      "region": "",
+      "country": "",
+      "status": null,
+      "has_ads_setting": null
+    }
+  },
+  "context": {}
+}

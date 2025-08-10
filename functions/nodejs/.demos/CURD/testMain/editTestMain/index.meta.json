@@ -1,0 +1,47 @@
+{
+  "apiID": "package_facdb4__c__function_aadiqelq3qqku",
+  "apiName": "editTestMain",
+  "label": {
+    "zh_CN": "editTestMain",
+    "en_US": "editTestMain"
+  },
+  "description": {
+    "zh_CN": "editTestMain",
+    "en_US": "Parse JSON string into JSON object"
+  },
+  "longTaskMode": false,
+  "frontendSDKInvokable": true,
+  "input": [
+    {
+      "key": "mainRecord",
+      "type": "Record",
+      "label": "mainRecord",
+      "required": false,
+      "description": "mainRecord",
+      "objectApiName": "testMain"
+    },
+    {
+      "key": "childRecordList",
+      "type": "RecordList",
+      "label": "childRecordList",
+      "required": false,
+      "description": "",
+      "objectApiName": "testChild",
+      "fieldApiNames": [
+        "_name",
+        "shippingOrderId",
+        "batchWeight",
+        "batchWeightRatio",
+        "forwarderOrder",
+        "isCalculating",
+        "recordVersion",
+        "_id",
+        "_createdBy",
+        "_createdAt",
+        "_updatedBy",
+        "_updatedAt"
+      ]
+    }
+  ],
+  "output": []
+}

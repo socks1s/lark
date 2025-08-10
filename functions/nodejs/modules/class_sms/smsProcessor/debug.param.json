@@ -1,0 +1,6 @@
+{
+  "params": {
+    "jsonData": "{ \"body\": { \"BATTERY_INFO\": \"\\n剩余电量：94%\\n充满电量：100%\\n当前电压：4.25V\\n当前温度：29.10℃\\n电池状态：放电中\\n健康度：良好\\n充电器：未知\", \"BATTERY_PCT\": \"94%\", \"CARD_SLOT\": \"SIM1_测试运营商_18888888888\", \"CURRENT_TIME\": \"2025-08-08 22:09:29\", \"DEVICE_NAME\": \"vivo-1\", \"FROM\": \"19999999999\", \"IPV4\": \"\", \"IPV6\": \"2409:8a63:422:9800:bd02:e4b8:a64e:8c71\", \"NET_TYPE\": \"WIFI\", \"SMS\": \"【飞书低代码】恭喜您，该发送通道测试成功，请继续添加转发规则！\" }, \"header\": { \"Accept\": \"application/json\", \"Accept-Encoding\": \"gzip\", \"Accept-Language\": \"zh-CN,zh;q=0.8\", \"Cache-Control\": \"no-cache\", \"Content-Length\": \"530\", \"Content-Type\": \"application/json\", \"Original-Destination-Cluster\": \"default\", \"Original-Destination-Service\": \"ee.kunlun.gateway\", \"Rpc-Persist-Bytetim-Business-Lark-Access-Subject-Id\": \"0\", \"Rpc-Persist-Bytetim-Business-Lark-Access-Subject-Type\": \"0\", \"Rpc-Persist-Inconsecutive-Detection\": \"1\", \"Rpc-Persist-Lane-P-Real-Ip\": \"183.220.46.83\", \"X-Real-Ip\": \"183.220.46.83\", \"X-Real-Port\": \"12293\", \"X-Tlb-Server-Addr\": \"106.38.222.156\", \"X-Tt-Trace-Id\": \"00-250808220930383126E18CB50403EAAF-66E08CD83E46F62D-00\" }, \"query\": {} }"
+  },
+  "context": {}
+}

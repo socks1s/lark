@@ -1,0 +1,11 @@
+{
+  "params": {
+    "currentData": "{\"_id\":1837438584997912,\"_name\":{\"zh_cn\":\"bigData53\"},\"_createdAt\":1752321793621,\"_createdBy\":{\"_id\":1832718556864633,\"_name\":{\"zh_cn\":\"王瀚霄\"}},\"_updatedAt\":1754237166688,\"_updatedBy\":{\"_id\":1832718556864633,\"_name\":{\"zh_cn\":\"王瀚霄\"}},\"approvalRecordId\":\"1838363016848410\",\"approvalStatus\":\"pending\",\"forwarderOrderId\":\"bigData53\",\"isCalculating\":true,\"recordVersion\":\"20\",\"serialNumber\":null}",
+    "previousData": "",
+    "ObjectApiName": "testMain",
+    "changeReason": "用户手动编辑数据，修改了订单ID和计算状态",
+    "changeType": "manualEdit",
+    "flowId": 1838363016848410
+  },
+  "context": {}
+}

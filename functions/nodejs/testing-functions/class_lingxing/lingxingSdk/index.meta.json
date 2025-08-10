@@ -1,0 +1,102 @@
+{
+  "apiID": "package_facdb4__c_lingxingSdk",
+  "apiName": "lingxingSdk",
+  "label": {
+    "zh_CN": "领星SDK云函数",
+    "en_US": "LingXing SDK"
+  },
+  "description": {
+    "zh_CN": "提供领星API的统一调用接口，包括token管理和业务接口调用功能",
+    "en_US": "Provides unified interface for LingXing API calls, including token management and business API requests"
+  },
+  "longTaskMode": false,
+  "frontendSDKInvokable": true,
+  "input": [
+    {
+      "key": "action",
+      "type": "Text",
+      "label": "操作类型",
+      "required": true,
+      "description": "操作类型：generateToken(生成token)、refreshToken(刷新token)、httpRequest(业务请求)"
+    },
+    {
+      "key": "appId",
+      "type": "Text",
+      "label": "应用ID",
+      "required": true,
+      "description": "企业的AppID，申请后在ERP中获取"
+    },
+    {
+      "key": "appSecret",
+      "type": "Text",
+      "label": "应用密钥",
+      "required": false,
+      "description": "企业的AppSecret，仅在generateToken操作时需要"
+    },
+    {
+      "key": "accessToken",
+      "type": "Text",
+      "label": "访问令牌",
+      "required": false,
+      "description": "访问令牌，在httpRequest操作时需要"
+    },
+    {
+      "key": "refreshToken",
+      "type": "Text",
+      "label": "刷新令牌",
+      "required": false,
+      "description": "刷新令牌，在refreshToken操作时需要"
+    },
+    {
+      "key": "routeName",
+      "type": "Text",
+      "label": "API路径",
+      "required": false,
+      "description": "业务接口的路径，在httpRequest操作时需要"
+    },
+    {
+      "key": "method",
+      "type": "Text",
+      "label": "请求方法",
+      "required": false,
+      "description": "HTTP请求方法，GET或POST，默认为GET"
+    },
+    {
+      "key": "requestParams",
+      "type": "JSON",
+      "label": "请求参数",
+      "required": false,
+      "description": "业务接口的请求参数，JSON格式"
+    }
+  ],
+  "output": [
+    {
+      "key": "success",
+      "type": "Boolean",
+      "label": "是否成功",
+      "required": true,
+      "description": "操作执行结果状态"
+    },
+    {
+      "key": "message",
+      "type": "Text",
+      "label": "返回消息",
+      "required": true,
+      "description": "操作结果的描述信息"
+    },
+    {
+      "key": "data",
+      "type": "JSON",
+      "label": "返回数据",
+      "required": false,
+      "description": "具体的业务数据内容"
+    },
+    {
+      "key": "code",
+      "type": "Text",
+      "label": "状态码",
+      "required": false,
+      "description": "API返回的状态码"
+    }
+  ]
+}

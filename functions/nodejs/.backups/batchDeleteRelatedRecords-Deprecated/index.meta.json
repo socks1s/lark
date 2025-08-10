@@ -1,0 +1,130 @@
+{
+  "apiID": "function_batchDeleteRelatedRecords",
+  "apiName": "batchDeleteRelatedRecords",
+  "label": {
+    "zh_CN": "批量删除关联记录",
+    "en_US": "Batch Delete Related Records"
+  },
+  "description": {
+    "zh_CN": "批量删除与父记录关联的子记录，先查找关联记录再批量删除",
+    "en_US": "Batch delete child records related to parent record, find related records first then batch delete"
+  },
+  "longTaskMode": false,
+  "frontendSDKInvokable": true,
+  "input": [
+    {
+      "key": "parentFieldApiName",
+      "type": "Text",
+      "required": true,
+      "label": "父记录关联字段",
+      "description": "子表中关联父表的字段API名称"
+    },
+    {
+      "key": "parentRecord",
+      "type": "Text",
+      "required": true,
+      "label": "父记录",
+      "description": "包含有效_id字段的父记录JSON字符串"
+    },
+    {
+      "key": "childObjectApiName",
+      "type": "Text",
+      "required": true,
+      "label": "子表API名称",
+      "description": "需要删除记录的子表API名称"
+    }
+  ],
+  "output": [
+    {
+      "key": "totalCount",
+      "type": "Number",
+      "required": true,
+      "label": "总记录数",
+      "description": "尝试删除的总记录数"
+    },
+    {
+      "key": "invalidCount",
+      "type": "Number",
+      "required": true,
+      "label": "无效记录数",
+      "description": "无效的记录数"
+    },
+    {
+      "key": "validCount",
+      "type": "Number",
+      "required": true,
+      "label": "有效记录数",
+      "description": "有效的记录数"
+    },
+    {
+      "key": "deleteSuccessCount",
+      "type": "Number",
+      "required": true,
+      "label": "删除成功数",
+      "description": "成功删除的记录数"
+    },
+    {
+      "key": "deleteFailCount",
+      "type": "Number",
+      "required": true,
+      "label": "删除失败数",
+      "description": "删除失败的记录数"
+    },
+    {
+      "key": "deleteSuccessList",
+      "type": "List",
+      "required": true,
+      "label": "删除成功列表",
+      "description": "成功删除的记录ID列表",
+      "listItem": {
+        "type": "Text"
+      }
+    },
+    {
+      "key": "deleteFailList",
+      "type": "List",
+      "required": true,
+      "label": "删除失败列表",
+      "description": "删除失败的记录ID和原因",
+      "listItem": {
+        "type": "Map",
+        "mapKey": {
+          "type": "Text"
+        },
+        "mapValue": {
+          "type": "Text"
+        }
+      }
+    },
+    {
+      "key": "invalidList",
+      "type": "List",
+      "required": true,
+      "label": "无效记录列表",
+      "description": "无效的记录ID列表",
+      "listItem": {
+        "type": "Map",
+        "mapKey": {
+          "type": "Text"
+        },
+        "mapValue": {
+          "type": "Text"
+        }
+      }
+    },
+    {
+      "key": "fullSuccess",
+      "type": "Boolean",
+      "required": true,
+      "label": "完全成功",
+      "description": "批量删除是否全部成功"
+    },
+    {
+      "key": "findRelatedRecordsResult",
+      "type": "Text",
+      "required": false,
+      "label": "查找关联记录结果",
+      "description": "查找关联记录的完整结果，用于调试"
+    }
+  ]
+}

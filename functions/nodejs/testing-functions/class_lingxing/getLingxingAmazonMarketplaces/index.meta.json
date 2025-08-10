@@ -1,0 +1,88 @@
+{
+  "apiID": "package_facdb4__c__functionAmazonMarketplaces",
+  "apiName": "getLingxingAmazonMarketplaces",
+  "label": {
+    "zh_CN": "领星亚马逊市场列表查询",
+    "en_US": "Lingxing Amazon Marketplaces Query"
+  },
+  "description": {
+    "zh_CN": "查询领星ERP中所有亚马逊市场列表，支持市场筛选、映射和数据统计功能。",
+    "en_US": "Query all Amazon marketplace lists in Lingxing ERP, supports market filtering, mapping and data statistics."
+  },
+  "longTaskMode": false,
+  "frontendSDKInvokable": true,
+  "input": [
+    {
+      "key": "access_token",
+      "type": "Text",
+      "required": true,
+      "label": "访问令牌",
+      "description": "领星API访问令牌，用于身份验证"
+    },
+    {
+      "key": "app_key",
+      "type": "Text",
+      "required": true,
+      "label": "企业ID",
+      "description": "领星ERP分配的企业标识ID"
+    },
+    {
+      "key": "appId",
+      "type": "Text",
+      "required": true,
+      "label": "应用ID",
+      "description": "领星ERP分配的应用ID，用于签名生成"
+    },
+    {
+      "key": "filters",
+      "type": "JSON",
+      "required": false,
+      "label": "筛选条件",
+      "description": "可选的市场筛选条件，支持region、country、code等字段"
+    }
+  ],
+  "output": [
+    {
+      "key": "success",
+      "type": "Boolean",
+      "required": true,
+      "label": "操作成功标识",
+      "description": "表示查询操作是否成功"
+    },
+    {
+      "key": "data",
+      "type": "JSON",
+      "required": false,
+      "label": "市场列表数据",
+      "description": "亚马逊市场列表，包含市场代码、名称、地区等信息"
+    },
+    {
+      "key": "summary",
+      "type": "JSON",
+      "required": false,
+      "label": "数据摘要",
+      "description": "包含总数、地区分布、请求ID等统计信息"
+    },
+    {
+      "key": "error",
+      "type": "Text",
+      "required": false,
+      "label": "错误信息",
+      "description": "操作失败时的错误描述"
+    },
+    {
+      "key": "error_details",
+      "type": "JSON",
+      "required": false,
+      "label": "错误详情",
+      "description": "详细的错误信息列表"
+    },
+    {
+      "key": "request_id",
+      "type": "Text",
+      "required": false,
+      "label": "请求ID",
+      "description": "API请求的唯一标识符"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "apiID": "function_testTxBatch",
+  "apiName": "testTransactionBatchCreate",
+  "label": {
+    "zh_CN": "测试事务批量创建返回值",
+    "en_US": "Test Transaction Batch Create Return Value"
+  },
+  "description": {
+    "zh_CN": "测试 tx.object(objApiName).registerBatchCreate() 的返回值结构，验证事务提交后返回的 ids 数组",
+    "en_US": "Test the return value structure of tx.object(objApiName).registerBatchCreate() and verify the ids array returned after transaction commit"
+  },
+  "longTaskMode": false,
+  "frontendSDKInvokable": true,
+  "input": [
+    {
+      "key": "objectApiName",
+      "type": "Text",
+      "required": true,
+      "label": "对象API名称",
+      "description": "要测试的对象 API 名称"
+    },
+    {
+      "key": "records",
+      "type": "JSON",
+      "required": true,
+      "label": "记录数组",
+      "description": "要批量创建的记录数组"
+    }
+  ],
+  "output": [
+    {
+      "key": "success",
+      "type": "Boolean",
+      "required": true,
+      "label": "测试结果",
+      "description": "测试是否成功"
+    },
+    {
+      "key": "testInfo",
+      "type": "JSON",
+      "required": false,
+      "label": "测试信息",
+      "description": "测试基本信息"
+    },
+    {
+      "key": "registerBatchCreateResult",
+      "type": "JSON",
+      "required": false,
+      "label": "批量创建结果",
+      "description": "registerBatchCreate 的返回值分析"
+    },
+    {
+      "key": "commitResult",
+      "type": "JSON",
+      "required": false,
+      "label": "提交结果",
+      "description": "事务提交的返回值"
+    },
+    {
+      "key": "verificationResult",
+      "type": "JSON",
+      "required": false,
+      "label": "验证结果",
+      "description": "记录验证结果"
+    },
+    {
+      "key": "error",
+      "type": "JSON",
+      "required": false,
+      "label": "错误信息",
+      "description": "错误信息（如果测试失败）"
+    }
+  ]
+}

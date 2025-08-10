@@ -1,0 +1,23 @@
+{
+  "params": {
+    "parentRecord": {
+      "_id": 1837438584997912,
+      "forwarderOrderId": "bigData53",
+      "serialNumber": null,
+      "isCalculating": false
+    },
+    "childRecordList": [
+      {
+        "_id": 1836974305658068,
+        "batchWeight": 100.5,
+        "recordVersion": 1
+      },
+      {
+        "batchWeight": 300.0,
+        "recordVersion": 1
+      }
+    ],
+    "parentFieldApiName": "parentId"
+  },
+  "context": {}
+}

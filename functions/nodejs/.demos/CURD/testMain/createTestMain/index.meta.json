@@ -1,0 +1,47 @@
+{
+  "apiID": "package_facdb4__c__function_230ngjzkvslviw",
+  "apiName": "createTestMain",
+  "label": {
+    "zh_CN": "createTestMain",
+    "en_US": "createTestMain"
+  },
+  "description": {
+    "zh_CN": "将JSON字符串解析为JSON对象",
+    "en_US": "Parse JSON string into JSON object"
+  },
+  "longTaskMode": false,
+  "frontendSDKInvokable": true,
+  "input": [
+    {
+      "key": "mainRecord",
+      "type": "Record",
+      "label": "mainRecord",
+      "required": false,
+      "description": "mainRecord",
+      "objectApiName": "testMain"
+    },
+    {
+      "key": "childRecordList",
+      "type": "RecordList",
+      "label": "childRecordList",
+      "required": false,
+      "description": "",
+      "objectApiName": "testChild",
+      "fieldApiNames": [
+        "_name",
+        "shippingOrderId",
+        "batchWeight",
+        "batchWeightRatio",
+        "forwarderOrder",
+        "isCalculating",
+        "recordVersion",
+        "_id",
+        "_createdBy",
+        "_createdAt",
+        "_updatedBy",
+        "_updatedAt"
+      ]
+    }
+  ],
+  "output": []
+}

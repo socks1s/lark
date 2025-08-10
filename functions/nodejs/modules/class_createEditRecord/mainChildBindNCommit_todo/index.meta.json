@@ -1,0 +1,103 @@
+{
+  "apiID": "packagection_mainChildBindNCommit",
+  "apiName": "mainChildBindNCommit",
+  "label": "智能主子表数据提交引擎",
+  "description": "智能主子表数据提交引擎，支持自适应策略选择、智能数据分类和容错处理",
+  "longTaskMode": false,
+  "frontendSDKInvokable": true,
+  "input": [
+    {
+      "key": "parentRecord",
+      "type": "JSON",
+      "label": "主表记录",
+      "required": true,
+      "description": "主表记录对象"
+    },
+    {
+      "key": "childRecords",
+      "type": "JSON",
+      "label": "子表记录列表",
+      "required": false,
+      "description": "子表记录数组"
+    },
+    {
+      "key": "parentFieldName",
+      "type": "Text",
+      "label": "主表关联字段名",
+      "required": true,
+      "description": "主表关联字段API名称"
+    },
+    {
+      "key": "parentObjectApiName",
+      "type": "Text",
+      "label": "主表API名称",
+      "required": true,
+      "description": "主表API名称"
+    },
+    {
+      "key": "childObjectApiName",
+      "type": "Text",
+      "label": "子表API名称",
+      "required": true,
+      "description": "子表API名称"
+    },
+    {
+      "key": "context",
+      "type": "JSON",
+      "label": "扩展上下文",
+      "required": false,
+      "description": "扩展上下文对象"
+    },
+    {
+      "key": "logger",
+      "type": "JSON",
+      "label": "自定义日志器",
+      "required": false,
+      "description": "自定义日志器对象"
+    }
+  ],
+  "output": [
+    {
+      "required": true,
+      "key": "strategy",
+      "type": "Text",
+      "label": "执行策略",
+      "description": "执行策略类型:PARENT_ONLY、ATOMIC、BATCH"
+    },
+    {
+      "required": true,
+      "key": "committedParent",
+      "type": "JSON",
+      "label": "已提交主表记录",
+      "description": "已提交的主表记录"
+    },
+    {
+      "required": true,
+      "key": "committedChildren",
+      "type": "JSON",
+      "label": "已提交子表记录",
+      "description": "已提交的子表记录数组（完整记录）"
+    },
+    {
+      "required": false,
+      "key": "committedChildRecordList",
+      "type": "JSON",
+      "label": "子记录ID列表",
+      "description": "已提交的子表记录ID数组(仅包含_id字段)"
+    },
+    {
+      "required": true,
+      "key": "totalProcessed",
+      "type": "Number",
+      "label": "总处理记录数",
+      "description": "总处理记录数量"
+    },
+    {
+      "required": true,
+      "key": "transactionCount",
+      "type": "Number",
+      "label": "事务数量",
+      "description": "执行的事务数量"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "params": {
+    "oldData": {
+      "user": {
+        "name": "张三",
+        "age": 25,
+        "skills": ["JavaScript", "Python"],
+        "active": true,
+        "profile": {
+          "email": "zhangsan@old.com",
+          "phone": "13800138000"
+        }
+      },
+      "settings": {
+        "theme": "dark",
+        "notifications": true,
+        "language": "zh-CN"
+      },
+      "metadata": {
+        "lastUpdateTime": "2024-01-01T10:00:00Z",
+        "version": 1
+      }
+    },
+    "newData": {
+      "user": {
+        "name": "张三",
+        "age": 26,
+        "skills": ["JavaScript", "Python", "React", "Vue"],
+        "active": true,
+        "profile": {
+          "email": "zhangsan@new.com",
+          "phone": "13800138000",
+          "address": "北京市朝阳区"
+        }
+      },
+      "settings": {
+        "theme": "light",
+        "notifications": true,
+        "language": "en-US",
+        "autoSave": true
+      },
+      "metadata": {
+        "lastUpdateTime": "2024-01-02T15:30:00Z",
+        "version": 2
+      },
+      "newSection": {
+        "feature1": "enabled",
+        "feature2": false
+      }
+    },
+    "ignoreFields": [
+      "metadata.lastUpdateTime"
+    ],
+    "options": {
+      "maxStringLength": 100,
+      "arrayOptimization": "deep",
+      "stringComparison": "normalized"
+    }
+  },
+  "context": {}
+}

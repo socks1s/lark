@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "react": "^17",
+    "@byted-apaas/client-sdk": "1.15.0"
+  },
+  "devDependencies": {
+    "@types/react": "^17"
+  }
+}

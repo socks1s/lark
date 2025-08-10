@@ -1,0 +1,29 @@
+{
+  "params": {
+    "recordList": [
+      {
+        "_id": 1838447763876923,
+        "isCalculating": true,
+        "name": "测试记录1"
+      },
+      {
+        "_id": 1838447882353770,
+        "isCalculating": false,
+        "name": "测试记录2"
+      },
+      {
+        "name": "新建记录1",
+        "isCalculating": true
+      },
+      {
+        "name": "新建记录2",
+        "isCalculating": false
+      }
+    ],
+    "objectApiName": "testMain",
+    "whereCondition": {
+      "name": "测试记录1"
+    }
+  },
+  "context": {}
+}

@@ -1,0 +1,18 @@
+{
+  "apiName": "plusBtn",
+  "label": {
+    "zh_CN": "plusBtn",
+    "en_US": ""
+  },
+  "icon": "./icon.svg",
+  "cover": "./cover.svg",
+  "description": {
+    "zh_CN": "plus Btn 组件描述",
+    "en_US": "plus Btn component description"
+  },
+  "device": [
+    "mobile",
+    "pc"
+  ],
+  "protocolVersion": "3.0"
+}

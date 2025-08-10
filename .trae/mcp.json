@@ -1,0 +1,24 @@
+{
+  "mcpServers": {
+    "browser-tools": {
+      "command": "npx",
+      "args": ["@agentdeskai/browser-tools-mcp@latest"],
+      "env": {
+        "PLAYWRIGHT_BROWSERS_PATH": "/Users/nathan/Library/Caches/ms-playwright"
+      }
+    },
+    "browserbase": {
+      "command": "npx",
+      "args": ["@browserbasehq/mcp-server-browserbase"],
+      "env": {
+        "BROWSERBASE_API_KEY": "",
+        "BROWSERBASE_PROJECT_ID": "",
+        "GEMINI_API_KEY": ""
+      }
+    },
+    "chrome": {
+      "command": "mcp-chrome-bridge",
+      "args": []
+    }
+  }
+}

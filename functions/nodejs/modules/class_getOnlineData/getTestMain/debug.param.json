@@ -1,0 +1,91 @@
+{
+  "params": {
+    "objectApiName": "testMain",
+    "limit": 2,
+    "selectFields": ["_id", "_name", "forwarderOrderId", "serialNumber", "isCalculating", "_createdAt", "_updatedAt", "_createdBy", "_updatedBy", "approvalStatus", "approvalRecordId", "recordVersion"],
+    "orderBy": "_id",
+    "orderDirection": "asc"
+  },
+  "context": {},
+  "_examples": {
+    "基础查询": {
+      "params": {
+        "objectApiName": "testMain",
+        "limit": 5
+      }
+    },
+    "按ID查询单条记录": {
+      "params": {
+        "objectApiName": "testMain",
+        "recordIds": "123456789",
+        "returnSingle": true
+      }
+    },
+    "按ID数组查询多条记录": {
+      "params": {
+        "objectApiName": "testMain",
+        "recordIds": ["123456789", "987654321", "456789123"],
+        "selectFields": ["_id", "forwarderOrderId", "serialNumber"]
+      }
+    },
+    "指定字段查询": {
+      "params": {
+        "objectApiName": "testMain",
+        "selectFields": ["_id", "forwarderOrderId", "serialNumber", "_createdAt"],
+        "limit": 20,
+        "orderBy": "_createdAt",
+        "orderDirection": "desc"
+      }
+    },
+    "条件查询": {
+      "params": {
+        "objectApiName": "testMain",
+        "conditions": {
+          "isCalculating": true,
+          "_createdAt": {
+            "$gte": "2024-01-01T00:00:00Z"
+          }
+        },
+        "selectFields": ["_id", "forwarderOrderId", "isCalculating", "_createdAt"],
+        "limit": 50
+      }
+    },
+    "分页查询": {
+      "params": {
+        "objectApiName": "testMain",
+        "limit": 10,
+        "offset": 20,
+        "orderBy": "forwarderOrderId",
+        "orderDirection": "asc"
+      }
+    },
+    "复杂条件查询": {
+      "params": {
+        "objectApiName": "testMain",
+        "conditions": {
+          "$or": [
+            { "isCalculating": true },
+            { "forwarderOrderId": { "$like": "%TEST%" } }
+          ],
+          "_createdAt": {
+            "$gte": "2024-01-01T00:00:00Z",
+            "$lte": "2024-12-31T23:59:59Z"
+          }
+        },
+        "selectFields": ["_id", "forwarderOrderId", "isCalculating", "_createdAt"],
+        "limit": 30,
+        "orderBy": "_createdAt",
+        "orderDirection": "desc"
+      }
+    },
+    "获取最新记录": {
+      "params": {
+        "objectApiName": "testMain",
+        "limit": 1,
+        "orderBy": "_createdAt",
+        "orderDirection": "desc",
+        "returnSingle": true
+      }
+    }
+  }
+}
