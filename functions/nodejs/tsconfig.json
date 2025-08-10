@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "allowJs": true,
+    "noEmit": true,
+    "lib": [
+      "ES2019"
+    ]
+  },
+  "include": [
+    "**/*",
+    "../../.kldx/typings/cloud_function/*.d.ts",
+    "../../.ae/typings/cloud_function/*.d.ts"
+, ".backups/batchDeleteRelatedRecords-Deprecated", ".backups/lingxingAmazonStores", ".backups/lingxingSdkOriginal", "../../testing-function/class_lingxing"  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

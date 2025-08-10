@@ -1,0 +1,47 @@
+{
+  "apiID": "package_facdb4__c__function_lpbaflvod014b",
+  "apiName": "batchDeleteRecords1",
+  "label": {
+    "zh_CN": "批量删除记录",
+    "en_US": "Batch Delete Records"
+  },
+  "description": {
+    "zh_CN": "批量删除传入的记录列表中的所有记录",
+    "en_US": "Delete all records in the input record list in batch"
+  },
+  "isPublicAPI": false,
+  "frontendSDKInvokable": false,
+  "longTaskMode": false,
+  "input": [
+    {
+      "key": "recordList",
+      "type": "RecordList",
+      "required": true,
+      "label": "记录列表",
+      "description": "需要删除的记录列表",
+      "objectApiName": "shippingOrders",
+      "fieldApiNames": [
+        "_id",
+        "shippingOrderId",
+        "batch_declaredName",
+        "act_batch_volume",
+        "allocatedAmounts",
+        "act_batch_weight"
+      ]
+    }
+  ],
+  "output": [
+    {
+      "key": "successCount",
+      "type": "Number",
+      "label": "成功数量",
+      "description": "成功删除的记录数量"
+    },
+    {
+      "key": "failedCount",
+      "type": "Number",
+      "label": "失败数量",
+      "description": "删除失败的记录数量"
+    }
+  ]
+}

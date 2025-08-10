@@ -1,0 +1,158 @@
+{
+  "apiID": "package_facdb4__c__function_lxisl001",
+  "apiName": "getLingxingInboundShipmentList",
+  "label": {
+    "zh_CN": "领星发货单列表查询",
+    "en_US": "Lingxing Inbound Shipment List"
+  },
+  "description": {
+    "zh_CN": "查询领星平台的发货单列表，支持多种筛选条件",
+    "en_US": "Query inbound shipment list from Lingxing platform with various filter conditions"
+  },
+  "longTaskMode": false,
+  "frontendSDKInvokable": true,
+  "input": [
+    {
+      "key": "search_value",
+      "type": "Text",
+      "required": false,
+      "label": "搜索值",
+      "description": "搜索的值"
+    },
+    {
+      "key": "search_field",
+      "type": "Text",
+      "required": false,
+      "label": "搜索字段",
+      "description": "搜索字段：sku, shipment_sn, shipment_id"
+    },
+    {
+      "key": "sids",
+      "type": "Text",
+      "required": false,
+      "label": "店铺ID",
+      "description": "店铺id，多个时通过英文逗号分隔"
+    },
+    {
+      "key": "mids",
+      "type": "Text",
+      "required": false,
+      "label": "国家ID",
+      "description": "国家id，多个时通过英文逗号分隔"
+    },
+    {
+      "key": "wid",
+      "type": "Text",
+      "required": false,
+      "label": "仓库ID",
+      "description": "仓库id，多个时通过英文逗号分隔"
+    },
+    {
+      "key": "logistics_type",
+      "type": "JSON",
+      "required": false,
+      "label": "物流方式",
+      "description": "物流方式id数组"
+    },
+    {
+      "key": "status",
+      "type": "Number",
+      "required": false,
+      "label": "发货单状态",
+      "description": "发货单状态：-1待配货，0待发货，1已发货，3已作废，4已删除"
+    },
+    {
+      "key": "print_status",
+      "type": "Text",
+      "required": false,
+      "label": "打印状态",
+      "description": "打印状态：0未打印，1已打印"
+    },
+    {
+      "key": "pick_status",
+      "type": "Text",
+      "required": false,
+      "label": "拣货状态",
+      "description": "拣货状态：0未拣货，1已拣货"
+    },
+    {
+      "key": "time_type",
+      "type": "Number",
+      "required": false,
+      "label": "时间类型",
+      "description": "时间类型：3创建时间(精确到时分秒)，2创建时间，1到货时间，0发货时间，4更新时间(精确到时分秒)"
+    },
+    {
+      "key": "start_date",
+      "type": "Text",
+      "required": false,
+      "label": "开始日期",
+      "description": "开始日期"
+    },
+    {
+      "key": "end_date",
+      "type": "Text",
+      "required": false,
+      "label": "结束日期",
+      "description": "结束日期"
+    },
+    {
+      "key": "offset",
+      "type": "Number",
+      "required": false,
+      "label": "偏移量",
+      "description": "偏移量=(currentPage-1)*length"
+    },
+    {
+      "key": "length",
+      "type": "Number",
+      "required": false,
+      "label": "长度",
+      "description": "长度"
+    },
+    {
+      "key": "is_delete",
+      "type": "Number",
+      "required": false,
+      "label": "是否删除",
+      "description": "是否删除：0未删除(默认)，1已删除，2全部"
+    }
+  ],
+  "output": [
+    {
+      "key": "success",
+      "type": "Boolean",
+      "required": true,
+      "label": "操作结果",
+      "description": "操作是否成功"
+    },
+    {
+      "key": "data",
+      "type": "JSON",
+      "required": false,
+      "label": "发货单数据",
+      "description": "发货单列表数据"
+    },
+    {
+      "key": "summary",
+      "type": "JSON",
+      "required": false,
+      "label": "汇总信息",
+      "description": "汇总信息，包含总数量、请求ID、响应时间等"
+    },
+    {
+      "key": "message",
+      "type": "Text",
+      "required": false,
+      "label": "错误消息",
+      "description": "错误消息（失败时）"
+    },
+    {
+      "key": "error",
+      "type": "Text",
+      "required": false,
+      "label": "错误详情",
+      "description": "错误详情（失败时）"
+    }
+  ]
+}

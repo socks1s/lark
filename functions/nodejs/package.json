@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "@byted-apaas/baas-sdk-node": "1.0.20",
+    "@byted-apaas/faas-sdk-node": "1.0.14",
+    "@byted-apaas/server-common-node": "2.0.25",
+    "@byted-apaas/server-sdk-node": "1.1.25",
+    "axios": "1.11.0",
+    "form-data": "4.0.4",
+    "@byted-apaas/integration-connector-sdk": "1.0.4",
+    "crypto-js": "4.2.0",
+    "md5": "2.3.0",
+    "qs": "6.14.0"
+  },
+  "runtime": "14.17.5"
+}

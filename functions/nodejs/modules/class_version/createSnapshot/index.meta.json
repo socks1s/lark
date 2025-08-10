@@ -1,0 +1,123 @@
+{
+  "apiID": "function_createSnapshot",
+  "apiName": "createSnapshot",
+  "label": {
+    "zh_CN": "创建快照",
+    "en_US": "Create Snapshot"
+  },
+  "description": {
+    "zh_CN": "创建数据变更快照，记录当前数据、之前数据及变更信息",
+    "en_US": "Create data change snapshot, recording current data, previous data and change information"
+  },
+  "longTaskMode": false,
+  "frontendSDKInvokable": true,
+  "input": [
+    {
+      "key": "currentData",
+      "type": "Text",
+      "required": true,
+      "label": "当前数据",
+      "description": "当前的数据内容（JSON字符串格式）"
+    },
+    {
+      "key": "previousData",
+      "type": "Text",
+      "required": false,
+      "label": "之前数据",
+      "description": "之前的数据内容（JSON字符串格式）"
+    },
+    {
+      "key": "ObjectApiName",
+      "type": "Text",
+      "required": true,
+      "label": "对象API名称",
+      "description": "数据所属的对象API名称"
+    },
+    {
+      "key": "changeReason",
+      "type": "Text",
+      "required": true,
+      "label": "变更原因",
+      "description": "数据变更的原因说明"
+    },
+    {
+      "key": "changeType",
+      "type": "Text",
+      "required": true,
+      "label": "变更类型",
+      "description": "变更类型：manualCreate, manualEdit, SystemEdit, other, systemCreate"
+    },
+    {
+      "key": "flowId",
+      "type": "Number",
+      "required": false,
+      "label": "流程ID",
+      "description": "关联的流程ID（可选，数字格式）"
+    }
+  ],
+  "output": [
+    {
+      "key": "status",
+      "type": "Text",
+      "required": true,
+      "label": "操作状态",
+      "description": "操作执行状态：success/error"
+    },
+    {
+      "key": "message",
+      "type": "Text",
+      "required": true,
+      "label": "操作消息",
+      "description": "操作结果的详细描述"
+    },
+    {
+      "key": "snapshotId",
+      "type": "Number",
+      "required": false,
+      "label": "快照ID",
+      "description": "创建的快照记录ID，失败时为null"
+    },
+    {
+      "key": "snapshotVersion",
+      "type": "Number",
+      "required": false,
+      "label": "快照版本号",
+      "description": "创建的快照版本号，失败时为null"
+    },
+    {
+      "key": "snapshot",
+      "type": "JSON",
+      "required": false,
+      "label": "完整快照记录",
+      "description": "创建的完整快照记录信息"
+    },
+    {
+      "key": "ObjectApiName",
+      "type": "Text",
+      "required": true,
+      "label": "对象API名称",
+      "description": "操作的对象API名称"
+    },
+    {
+      "key": "recordId",
+      "type": "Number",
+      "required": true,
+      "label": "记录ID",
+      "description": "操作的记录ID（从currentData的_id字段获取）"
+    },
+    {
+      "key": "changeType",
+      "type": "Text",
+      "required": true,
+      "label": "变更类型",
+      "description": "执行的变更类型"
+    },
+    {
+      "key": "initiator",
+      "type": "JSON",
+      "required": false,
+      "label": "发起人",
+      "description": "变更操作的发起人信息（从currentData的_updatedBy字段获取）"
+    }
+  ]
+}

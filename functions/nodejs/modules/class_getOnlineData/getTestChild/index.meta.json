@@ -1,0 +1,109 @@
+{
+  "apiID": "function_getTestChild",
+  "apiName": "getTestChild",
+  "label": {
+    "zh_CN": "获取子表测试数据",
+    "en_US": "Get Child Table Test Data"
+  },
+  "description": {
+    "zh_CN": "通用子表测试数据获取函数，支持获取单条或多条子表记录，可按父记录ID查询，支持关联父记录信息，专为子表测试场景设计",
+    "en_US": "Universal child table test data retrieval function that supports getting single or multiple child records, can query by parent record ID, supports parent record association, designed for child table testing scenarios"
+  },
+  "longTaskMode": false,
+  "frontendSDKInvokable": true,
+  "input": [
+    {
+      "key": "objectApiName",
+      "type": "Text",
+      "required": true,
+      "label": "对象API名称",
+      "description": "子表对象的API名称"
+    },
+    {
+      "key": "parentObjectApiName",
+      "type": "Text",
+      "required": false,
+      "label": "父表API名称",
+      "description": "父表对象的API名称，用于关联查询"
+    },
+    {
+      "key": "parentRecordId",
+      "type": "Number",
+      "required": false,
+      "label": "父记录ID",
+      "description": "父记录的ID，用于查询关联的子记录"
+    },
+    {
+      "key": "limit",
+      "type": "Number",
+      "required": false,
+      "label": "记录数量",
+      "description": "返回记录的数量限制，默认为1"
+    },
+    {
+      "key": "fields",
+      "type": "JSON",
+      "required": false,
+      "label": "查询字段",
+      "description": "需要查询的字段列表，为空时返回所有字段"
+    },
+    {
+      "key": "conditions",
+      "type": "JSON",
+      "required": false,
+      "label": "查询条件",
+      "description": "额外的查询条件"
+    },
+    {
+      "key": "includeParent",
+      "type": "Boolean",
+      "required": false,
+      "label": "包含父记录",
+      "description": "是否在结果中包含关联的父记录信息，默认为false"
+    }
+  ],
+  "output": [
+    {
+      "key": "success",
+      "type": "Boolean",
+      "required": true,
+      "label": "执行结果",
+      "description": "操作是否成功"
+    },
+    {
+      "key": "records",
+      "type": "JSON",
+      "required": false,
+      "label": "子记录列表",
+      "description": "查询到的子表记录列表"
+    },
+    {
+      "key": "parentRecord",
+      "type": "JSON",
+      "required": false,
+      "label": "父记录",
+      "description": "关联的父记录信息（当includeParent为true时返回）"
+    },
+    {
+      "key": "count",
+      "type": "Number",
+      "required": false,
+      "label": "记录数量",
+      "description": "实际返回的记录数量"
+    },
+    {
+      "key": "metadata",
+      "type": "JSON",
+      "required": false,
+      "label": "元数据",
+      "description": "查询元数据信息，包含对象名称、查询参数等"
+    },
+    {
+      "key": "error",
+      "type": "Text",
+      "required": false,
+      "label": "错误信息",
+      "description": "错误信息（如果操作失败）"
+    }
+  ]
+}

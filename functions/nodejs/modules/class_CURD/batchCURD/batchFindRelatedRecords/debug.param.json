@@ -1,0 +1,19 @@
+{
+  "params": {
+    "parentFieldApiName": "forwarderOrder",
+    "parentRecord": {
+      "_id": 1839644818140171,
+      "forwarderOrderId": "TEST-ORDER-001",
+      "status": "active"
+    },
+    "childObjectApiName": "testChild",
+    "selectChildFields": [
+      "_id",
+      "_name",
+      "shippingOrderId",
+      "batchWeight",
+      "forwarderOrder"
+    ]
+  },
+  "context": {}
+}

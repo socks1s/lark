@@ -1,0 +1,12 @@
+{
+  "params": {
+    "objectApiName": "testMain",
+    "records": [
+      {
+        "forwarderOrderId": "测试记录1",
+        "isCalculating": true
+      }
+    ]
+  },
+  "context": {}
+}

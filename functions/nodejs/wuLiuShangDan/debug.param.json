@@ -1,0 +1,24 @@
+{
+  "params": {
+    "mainRecord": {
+      "_id": 1838377468174395,
+      "forwarderOrderId": "TEST-DEBUG-001",
+      "recordVersion": 1,
+      "approvalStatus": "pending"
+    },
+    "mainObjectApiName": "testMain",
+    "parentFieldApiName": "forwarderOrder", 
+    "childObjectApiName": "testChild",
+    "operation": "edit",
+    "childRecordList": [
+      {
+        "_id": 1838447358845018,
+        "shippingOrderId": "DEBUG-661-66"
+      },
+      {
+        "shippingOrderId": "DEBUG-662-77"
+      }
+    ]
+  },
+  "context": {}
+}

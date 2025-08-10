@@ -1,0 +1,27 @@
+{
+  "params": {
+    "parentRecord": {
+      "_id": 1837438584997912,
+      "forwarderOrderId": "bigData53",
+      "isCalculating": true
+    },
+    "childRecords": [
+      {
+        "_id": 1838447358845018,
+        "shippingOrderId": "661-66",
+        "batchWeight": 100.5,
+        "isCalculating": false,
+        "recordVersion": 1
+      },
+      {
+        "shippingOrderId": "662-77",
+        "batchWeight": 200.8,
+        "isCalculating": true
+      }
+    ],
+    "parentFieldName": "forwarderOrder",
+    "parentObjectApiName": "testMain",
+    "childObjectApiName": "testChild"
+  },
+  "context": {}
+}

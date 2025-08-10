@@ -1,0 +1,102 @@
+{
+  "apiID": "testGenerateRefreshToken",
+  "apiName": "testGenerateRefreshToken",
+  "label": {
+    "zh_CN": "领星SDK云函数（模块化版本）",
+    "en_US": "LingXing SDK Cloud Function (Modular Version)"
+  },
+  "description": {
+    "zh_CN": "提供领星API的统一调用接口，包括token管理和业务接口调用（模块化架构版本）",
+    "en_US": "Provides unified interface for LingXing API calls, including token management and business API requests (Modular Architecture Version)"
+  },
+  "longTaskMode": false,
+  "frontendSDKInvokable": true,
+  "input": [
+    {
+      "key": "action",
+      "type": "Text",
+      "label": "操作类型",
+      "required": true,
+      "description": "操作类型：generateToken（生成token）、refreshToken（刷新token）、httpRequest（HTTP请求）、getValidToken（获取有效token）"
+    },
+    {
+      "key": "appId",
+      "type": "Text",
+      "label": "应用ID",
+      "required": false,
+      "description": "企业的AppID，可选，默认从全局变量获取"
+    },
+    {
+      "key": "appSecret",
+      "type": "Text",
+      "label": "应用密钥",
+      "required": false,
+      "description": "企业的AppSecret，仅generateToken时需要，可选，默认从全局变量获取"
+    },
+    {
+      "key": "accessToken",
+      "type": "Text",
+      "label": "访问令牌",
+      "required": false,
+      "description": "访问令牌，httpRequest时需要"
+    },
+    {
+      "key": "refreshToken",
+      "type": "Text",
+      "label": "刷新令牌",
+      "required": false,
+      "description": "刷新令牌，refreshToken时需要"
+    },
+    {
+      "key": "routeName",
+      "type": "Text",
+      "label": "API路径",
+      "required": false,
+      "description": "API路径，httpRequest时需要"
+    },
+    {
+      "key": "method",
+      "type": "Text",
+      "label": "请求方法",
+      "required": false,
+      "description": "请求方法：GET或POST，httpRequest时需要，默认GET"
+    },
+    {
+      "key": "requestParams",
+      "type": "JSON",
+      "label": "请求参数",
+      "required": false,
+      "description": "请求参数对象，httpRequest时需要，默认空对象"
+    }
+  ],
+  "output": [
+    {
+      "key": "success",
+      "type": "Boolean",
+      "label": "是否成功",
+      "required": true,
+      "description": "操作执行结果状态"
+    },
+    {
+      "key": "message",
+      "type": "Text",
+      "label": "消息",
+      "required": true,
+      "description": "操作结果消息"
+    },
+    {
+      "key": "data",
+      "type": "JSON",
+      "label": "返回数据",
+      "required": false,
+      "description": "具体的业务数据内容"
+    },
+    {
+      "key": "code",
+      "type": "Text",
+      "label": "错误代码",
+      "required": false,
+      "description": "错误代码，仅在出错时返回"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "apiID": "package_facdb4__c__function_v5192nsyxsp701",
+  "apiName": "convertRecordToId",
+  "label": {
+    "zh_CN": "convertRecordToId",
+    "en_US": "Extract Record IDs"
+  },
+  "description": {
+    "zh_CN": "将传入的recordList转换成idList",
+    "en_US": "Extract all _id from record list and return as array"
+  },
+  "isPublicAPI": false,
+  "frontendSDKInvokable": false,
+  "longTaskMode": false,
+  "input": [
+    {
+      "key": "recordList",
+      "type": "RecordList",
+      "required": false,
+      "label": "输入记录列表",
+      "description": "",
+      "objectApiName": "testChild",
+      "fieldApiNames": [
+        "_id"
+      ]
+    }
+  ],
+  "output": [
+    {
+      "key": "idList",
+      "type": "List",
+      "label": "ID列表",
+      "description": "从输入记录中提取的所有_id组成的数组",
+      "listItem": {
+        "type": "BigInt"
+      }
+    }
+  ]
+}

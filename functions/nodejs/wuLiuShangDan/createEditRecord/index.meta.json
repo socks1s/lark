@@ -1,0 +1,81 @@
+{
+  "apiID": "package_facdb4__c__function_aa451ilq3qqku1",
+  "apiName": "createEditRecord1",
+  "label": {
+    "zh_CN": "创建/编辑记录1",
+    "en_US": "Create/Edit Record1"
+  },
+  "description": {
+    "zh_CN": "根据操作类型创建或编辑父子记录",
+    "en_US": "Create or edit parent-child records based on operation type"
+  },
+  "longTaskMode": false,
+  "frontendSDKInvokable": true,
+  "input": [
+    {
+      "key": "mainRecord",
+      "type": "Record",
+      "label": "主记录",
+      "required": false,
+      "description": "主表记录数据",
+      "objectApiName": "testMain"
+    },
+    {
+      "key": "mainObjectApiName",
+      "type": "Text",
+      "label": "主对象ApiName",
+      "required": true,
+      "description": "主表对象ApiName"
+    },
+    {
+      "key": "parentFieldApiName",
+      "type": "Text",
+      "label": "父字段ApiName",
+      "required": true,
+      "description": "关联父记录的字段ApiName"
+    },
+    {
+      "key": "childObjectApiName",
+      "type": "Text",
+      "label": "子对象ApiName",
+      "required": true,
+      "description": "子表对象ApiName"
+    },
+    {
+      "key": "operation",
+      "type": "Text",
+      "label": "操作类型",
+      "required": true,
+      "description": "操作类型：'edit'或'create'",
+      "validateOptions": {
+        "options": [
+          "edit",
+          "create"
+        ]
+      }
+    },
+    {
+      "key": "childRecordList",
+      "type": "RecordList",
+      "label": "子记录列表",
+      "required": false,
+      "description": "子表记录数据列表",
+      "objectApiName": "testChild",
+      "fieldApiNames": [
+        "_name",
+        "shippingOrderId",
+        "batchWeight",
+        "batchWeightRatio",
+        "forwarderOrder",
+        "isCalculating",
+        "recordVersion",
+        "_id",
+        "_createdBy",
+        "_createdAt",
+        "_updatedBy",
+        "_updatedAt"
+      ]
+    }
+  ],
+  "output": []
+}

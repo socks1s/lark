@@ -1,0 +1,95 @@
+{
+  "apiID": "package_facdb4__c_getLingxingAccessToken",
+  "apiName": "getLingxingAccessToken",
+  "label": {
+    "zh_CN": "领星AccessToken管理",
+    "en_US": "Lingxing AccessToken Management"
+  },
+  "description": {
+    "zh_CN": "领星ERP AccessToken获取和续约函数，支持获取新token和续约现有token，确保API调用的持续有效性。",
+    "en_US": "Lingxing ERP AccessToken acquisition and renewal function, supports getting new tokens and refreshing existing tokens to ensure continuous API call validity."
+  },
+  "longTaskMode": false,
+  "frontendSDKInvokable": true,
+  "input": [
+    {
+      "key": "appId",
+      "type": "Text",
+      "required": true,
+      "label": "应用ID",
+      "description": "领星ERP分配的应用ID"
+    },
+    {
+      "key": "appSecret",
+      "type": "Text",
+      "required": true,
+      "label": "应用密钥",
+      "description": "领星ERP分配的应用密钥"
+    },
+    {
+      "key": "operation",
+      "type": "Text",
+      "required": false,
+      "label": "操作类型",
+      "description": "操作类型：get(获取新token) 或 refresh(续约token)，默认为get"
+    },
+    {
+      "key": "accessToken",
+      "type": "Text",
+      "required": false,
+      "label": "访问令牌",
+      "description": "续约操作时需要提供的当前访问令牌"
+    },
+    {
+      "key": "refreshToken",
+      "type": "Text",
+      "required": false,
+      "label": "刷新令牌",
+      "description": "续约操作时需要提供的刷新令牌"
+    }
+  ],
+  "output": [
+    {
+      "key": "success",
+      "type": "Boolean",
+      "required": true,
+      "label": "操作成功标识",
+      "description": "表示操作是否成功"
+    },
+    {
+      "key": "code",
+      "type": "Number",
+      "required": true,
+      "label": "状态码",
+      "description": "操作状态码，0表示成功，-1表示失败"
+    },
+    {
+      "key": "message",
+      "type": "Text",
+      "required": true,
+      "label": "操作消息",
+      "description": "操作结果的描述信息"
+    },
+    {
+      "key": "data",
+      "type": "JSON",
+      "required": false,
+      "label": "Token数据",
+      "description": "包含access_token、refresh_token、expires_in等信息"
+    },
+    {
+      "key": "error",
+      "type": "JSON",
+      "required": false,
+      "label": "错误信息",
+      "description": "操作失败时的详细错误信息"
+    },
+    {
+      "key": "meta",
+      "type": "JSON",
+      "required": true,
+      "label": "元数据",
+      "description": "包含操作类型、时间戳、应用ID等元信息"
+    }
+  ]
+}

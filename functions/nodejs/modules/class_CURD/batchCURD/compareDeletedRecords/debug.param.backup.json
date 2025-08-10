@@ -1,0 +1,38 @@
+{
+  "params": {
+    "oldRecordList": [
+      {
+        "_id": 1001,
+        "name": "产品A",
+        "category": "电子产品",
+        "price": 299.99
+      },
+      {
+        "_id": 1002,
+        "name": "产品B",
+        "category": "家居用品",
+        "price": 159.50
+      },
+      {
+        "_id": 1003,
+        "name": "产品C",
+        "category": "服装",
+        "price": 89.00
+      },
+      {
+        "_id": 1004,
+        "name": "产品D",
+        "category": "图书",
+        "price": 45.80
+      },
+      {
+        "_id": 1005,
+        "name": "产品E",
+        "category": "运动用品",
+        "price": 199.99
+      }
+    ],
+    "newRecordList": [1001, 1003, 1006, 1007]
+  },
+  "context": {}
+}

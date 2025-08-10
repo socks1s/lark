@@ -1,0 +1,82 @@
+{
+  "apiID": "lingxingAmazonStores",
+  "apiName": "lingxingAmazonStores",
+  "label": "领星-查询亚马逊店铺列表",
+  "description": "查询得到企业已授权到领星ERP的全部亚马逊店铺信息，包括店铺ID、站点信息、授权状态等详细数据",
+  "longTaskMode": false,
+  "frontendSDKInvokable": true,
+  "input": [
+    {
+      "key": "access_token",
+      "type": "Text",
+      "required": true,
+      "label": "访问令牌",
+      "description": "领星API访问令牌，用于身份验证"
+    },
+    {
+      "key": "app_key",
+      "type": "Text",
+      "required": true,
+      "label": "企业ID",
+      "description": "领星ERP企业标识ID"
+    },
+    {
+      "key": "appId",
+      "type": "Text",
+      "required": true,
+      "label": "应用ID",
+      "description": "用于生成API签名的应用标识"
+    },
+    {
+      "key": "filters",
+      "type": "JSON",
+      "required": false,
+      "label": "筛选条件",
+      "description": "可选的店铺筛选条件，支持按地区、国家、状态等筛选"
+    }
+  ],
+  "output": [
+    {
+      "key": "success",
+      "type": "Boolean",
+      "required": true,
+      "label": "执行状态",
+      "description": "函数执行是否成功"
+    },
+    {
+      "key": "data",
+      "type": "JSON",
+      "required": false,
+      "label": "店铺数据",
+      "description": "亚马逊店铺列表数据，包含店铺详细信息"
+    },
+    {
+      "key": "summary",
+      "type": "JSON",
+      "required": false,
+      "label": "数据摘要",
+      "description": "店铺数据统计摘要，包含总数、地区分布、状态分布等"
+    },
+    {
+      "key": "error",
+      "type": "Text",
+      "required": false,
+      "label": "错误信息",
+      "description": "执行失败时的错误描述"
+    },
+    {
+      "key": "error_details",
+      "type": "JSON",
+      "required": false,
+      "label": "错误详情",
+      "description": "详细的错误信息数组"
+    },
+    {
+      "key": "request_id",
+      "type": "Text",
+      "required": false,
+      "label": "请求ID",
+      "description": "API请求的唯一标识符"
+    }
+  ]
+}

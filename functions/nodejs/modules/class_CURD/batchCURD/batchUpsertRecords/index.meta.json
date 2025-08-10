@@ -1,0 +1,55 @@
+{
+  "apiID": "package_facdb4__c__function_egavdwrmqe069",
+  "apiName": "batchUpsertRecords",
+  "label": {
+    "zh_CN": "记录批量入库",
+    "en_US": "batchUpsertRecords"
+  },
+  "description": {
+    "zh_CN": "将记录列表按ID分组后批量创建或更新到指定对象",
+    "en_US": "Group records by ID and batch create/update to specified object"
+  },
+  "longTaskMode": false,
+  "frontendSDKInvokable": true,
+  "input": [
+    {
+      "key": "recordList",
+      "label": "recordList",
+      "type": "JSON",  
+      "required": true,
+      "description": "需要进行变更的的记录列表",
+      "schema": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      }
+    },
+    {
+      "key": "objectApiName",
+      "type": "Text",
+      "required": true,
+      "label": "对象API名称",
+      "description": "记录所属的对象API名称"
+    },
+    {
+      "key": "where",
+      "type": "JSON",
+      "required": false,
+      "label": "更新条件",
+      "description": "仅对需要更新的记录有_id字段应用的where过滤条件创建记录时忽略此条件",
+      "schema": {
+        "type": "object"
+      }
+    }
+  ],
+  "output": [
+    {
+      "key": "stats",
+      "type": "JSON",
+      "required": true,
+      "label": "统计信息",
+      "description": "包含各种操作的成功/失败数量统计"
+    }
+  ]
+}

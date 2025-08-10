@@ -1,0 +1,46 @@
+{
+  "apiID": "package_facdb4__c__function_do8gvb1kl6f0m",
+  "apiName": "relateParentChildRecords",
+  "label": {
+    "zh_CN": "主子表关联",
+    "en_US": "Parent-Child Relation"
+  },
+  "description": {
+    "zh_CN": "处理主子表关联关系，为子记录添加父表关联字段",
+    "en_US": "Handle parent-child table relationships by adding parent reference fields to child records"
+  },
+  "longTaskMode": false,
+  "frontendSDKInvokable": true,
+  "input": [
+    {
+      "key": "childRecordList",
+      "type": "JSON",
+      "required": true,
+      "label": "子记录列表",
+      "description": "待关联的子记录列表，必须为JSON数组格式"
+    },
+    {
+      "key": "parentRecord",
+      "type": "JSON",
+      "required": true,
+      "label": "父记录",
+      "description": "父记录对象，必须包含有效的_id字段"
+    },
+    {
+      "key": "parentFieldApiName",
+      "type": "Text",
+      "required": true,
+      "label": "关联字段名",
+      "description": "子表中关联父表的字段名"
+    }
+  ],
+  "output": [
+    {
+      "key": "updatedChildRecordList",
+      "type": "JSON",
+      "required": true,
+      "label": "更新后的子记录",
+      "description": "已添加父表关联字段的子记录列表"
+    }
+  ]
+}

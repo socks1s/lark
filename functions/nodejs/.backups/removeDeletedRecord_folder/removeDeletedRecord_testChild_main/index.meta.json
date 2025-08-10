@@ -1,0 +1,53 @@
+{
+  "apiID": "package_facdb4__c__function_94b536rbptezu",
+  "apiName": "removeDeletedRecord_testChild",
+  "label": {
+    "zh_CN": "removeDeletedRecord_testChild",
+    "en_US": "removeDeletedRecord_testChild"
+  },
+  "description": {
+    "zh_CN": "removeDeletedRecord_testChild",
+    "en_US": "removeDeletedRecord_testChild"
+  },
+  "isPublicAPI": false,
+  "frontendSDKInvokable": false,
+  "longTaskMode": false,
+  "input": [
+    {
+      "key": "recordListOld",
+      "type": "RecordList",
+      "required": false,
+      "label": "recordListOld",
+      "description": "",
+      "objectApiName": "testChild",
+      "fieldApiNames": [
+        "_id"
+      ]
+    },
+    {
+      "key": "recordListNew",
+      "type": "RecordList",
+      "required": false,
+      "label": "recordListNew",
+      "description": "",
+      "objectApiName": "testChild",
+      "fieldApiNames": [
+        "_id"
+      ]
+    }
+  ],
+  "output": [
+    {
+      "key": "successCount",
+      "type": "BigInt",
+      "label": "successCount",
+      "description": ""
+    },
+    {
+      "key": "failedCount",
+      "type": "BigInt",
+      "label": "failedCount",
+      "description": ""
+    }
+  ]
+}

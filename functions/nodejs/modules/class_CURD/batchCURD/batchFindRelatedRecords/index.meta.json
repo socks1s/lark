@@ -1,0 +1,63 @@
+{
+  "apiID": "package_facdb4__c__function_gn5euay9jbrfr",
+  "apiName": "batchFindRelatedRecords",
+  "label": {
+    "zh_CN": "批量查询关联记录",
+    "en_US": "Batch Find Related Records"
+  },
+  "description": {
+    "zh_CN": "批量查询父记录关联的子记录列表，处理平台查询限制并动态处理select字段",
+    "en_US": "Batch find child records related to parent record, handle platform query limits and dynamic select fields"
+  },
+  "longTaskMode": false,
+  "frontendSDKInvokable": true,
+  "input": [
+    {
+      "key": "parentFieldApiName",
+      "type": "Text",
+      "required": true,
+      "label": "父记录关联字段",
+      "description": "子表中关联父表的字段API名称"
+    },
+    {
+      "key": "parentRecord",
+      "type": "Text",
+      "required": true,
+      "label": "父记录",
+      "description": "包含有效_id字段的父记录JSON对象/字符串"
+    },
+    {
+      "key": "childObjectApiName",
+      "type": "Text",
+      "required": true,
+      "label": "子表API名称",
+      "description": "需要查询的子表API名称"
+    },
+    {
+      "key": "selectChildFields",
+      "type": "List",
+      "required": false,
+      "label": "查询字段列表",
+      "description": "需要查询的子表字段API名称列表，空时默认查询_id",
+      "listItem": {
+        "type": "Text"
+      }
+    }
+  ],
+  "output": [
+    {
+      "key": "totalCount",
+      "type": "Number",
+      "required": true,
+      "label": "总记录数",
+      "description": "查询到的关联记录总数"
+    },
+    {
+      "key": "relatedRecords",
+      "type": "JSON",
+      "required": true,
+      "label": "关联记录",
+      "description": "查询到的关联记录列表JSON数组"
+    }
+  ]
+}

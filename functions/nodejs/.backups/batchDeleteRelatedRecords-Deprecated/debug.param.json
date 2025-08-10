@@ -1,0 +1,10 @@
+{
+  "params": {
+    "parentFieldApiName": "forwarderOrder",
+    "parentRecord": {
+      "_id": "1839035876329652"
+    },
+    "childObjectApiName": "testChild"
+  },
+  "context": {}
+}

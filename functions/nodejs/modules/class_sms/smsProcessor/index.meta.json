@@ -1,0 +1,46 @@
+{
+  "apiID": "function_smsprocessor",
+  "apiName": "smsProcessor",
+  "label": {
+    "zh_CN": "短信处理函数",
+    "en_US": "SMS Processor"
+  },
+  "description": {
+    "zh_CN": "解析JSON格式的SMS数据并存储到数据库中，提取关键字段信息",
+    "en_US": "Parse JSON format SMS data and store it in database, extract key field information"
+  },
+  "longTaskMode": false,
+  "frontendSDKInvokable": true,
+  "input": [
+    {
+      "key": "jsonData",
+      "type": "Text",
+      "label": "短信接收Webhook的JSON字符串",
+      "required": true,
+      "description": "包含SMS信息的JSON格式字符串数据"
+    }
+  ],
+  "output": [
+    {
+      "key": "success",
+      "type": "Boolean",
+      "label": "是否成功",
+      "required": true,
+      "description": "操作执行结果状态"
+    },
+    {
+      "key": "data",
+      "type": "JSON",
+      "label": "返回数据",
+      "required": false,
+      "description": "处理结果数据，包含记录ID和提取的字段信息"
+    },
+    {
+      "key": "error",
+      "type": "Text",
+      "label": "错误信息",
+      "required": false,
+      "description": "处理失败时的错误详情"
+    }
+  ]
+}

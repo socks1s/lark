@@ -1,0 +1,32 @@
+{
+  "apiID": "package_facdb4__c__function_wuqvnnrc51a04",
+  "apiName": "getObjectFields",
+  "label": {
+    "zh_CN": "获取对象字段",
+    "en_US": "Get Object Fields"
+  },
+  "description": {
+    "zh_CN": "获取指定对象的所有字段信息，需传入有效的对象API名称",
+    "en_US": "Retrieve all field information of the specified object, requires valid object API name"
+  },
+  "longTaskMode": false,
+  "frontendSDKInvokable": true,
+  "input": [
+    {
+      "key": "objectApiName",
+      "type": "Text",
+      "required": true,
+      "label": "对象API名称",
+      "description": "需要获取字段的对象API名称，不能为空"
+    }
+  ],
+  "output": [
+    {
+      "key": "fields",
+      "type": "JSON",
+      "required": true,
+      "label": "字段列表",
+      "description": "指定对象的所有字段信息"
+    }
+  ]
+}

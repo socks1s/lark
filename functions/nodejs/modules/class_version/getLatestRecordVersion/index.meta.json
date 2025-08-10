@@ -1,0 +1,98 @@
+{
+  "apiID": "function_getLatestRecordVersion",
+  "apiName": "getLatestRecordVersion",
+  "label": {
+    "zh_CN": "获取最新版本号",
+    "en_US": "Get Latest Version"
+  },
+  "description": {
+    "zh_CN": "根据对象API名称和记录ID获取指定记录的最新版本号",
+    "en_US": "Get the latest version number of a specific record by object API name and record ID"
+  },
+  "longTaskMode": false,
+  "frontendSDKInvokable": true,
+  "input": [
+    {
+      "key": "objectApiName",
+      "type": "Text",
+      "required": true,
+      "label": "对象API名称",
+      "description": "要查询的对象的API名称"
+    },
+    {
+      "key": "recordId",
+      "type": "Number",
+      "required": true,
+      "label": "记录ID",
+      "description": "要查询版本号的记录ID（数字格式）"
+    }
+  ],
+  "output": [
+    {
+      "key": "status",
+      "type": "Text",
+      "required": true,
+      "label": "操作状态",
+      "description": "操作执行状态：success/not_found/error"
+    },
+    {
+      "key": "message",
+      "type": "Text",
+      "required": true,
+      "label": "操作消息",
+      "description": "操作结果的详细描述"
+    },
+    {
+      "key": "latestVersion",
+      "type": "Number",
+      "required": false,
+      "label": "最新版本号",
+      "description": "查询到的最新版本号，未找到时为null"
+    },
+    {
+      "key": "record",
+      "type": "JSON",
+      "required": false,
+      "label": "完整记录",
+      "description": "最新版本的完整记录信息",
+      "schema": {
+        "type": "object"
+      }
+    },
+    {
+      "key": "objectApiName",
+      "type": "Text",
+      "required": true,
+      "label": "对象API名称",
+      "description": "查询的对象API名称"
+    },
+    {
+      "key": "recordId",
+      "type": "Text",
+      "required": true,
+      "label": "记录ID",
+      "description": "查询的记录ID"
+    },
+    {
+      "key": "error",
+      "type": "JSON",
+      "required": false,
+      "label": "错误信息",
+      "description": "当status为error时的详细错误信息",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "stack": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  ]
+}

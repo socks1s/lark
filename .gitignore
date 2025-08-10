@@ -1,16 +1,32 @@
-# Compiled class file
+# Node.js dependencies
+node_modules
+
+# Build and output directories
+mini-program
+output
+.build
+
+# System files
+.DS_Store
+
+# IDE and editor files
+.idea
+.vscode/settings.json
+
+# Package manager files
+.yarn
+yarn-error.log*
+*-debug.log
+
+# Project specific
+.kldx
+.ae
+
+# Java compiled files
 *.class
-
-# Log file
 *.log
-
-# BlueJ files
 *.ctxt
-
-# Mobile Tools for Java (J2ME)
 .mtj.tmp/
-
-# Package Files #
 *.jar
 *.war
 *.nar
@@ -18,7 +34,5 @@
 *.zip
 *.tar.gz
 *.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*

@@ -1,0 +1,50 @@
+{
+  "description": "获取飞书云函数出口IP地址的调试参数配置",
+  "scenarios": {
+    "basic": {
+      "description": "基础检测 - 使用默认的IP检测服务",
+      "params": {}
+    },
+    "withCustomUrls": {
+      "description": "自定义检测服务 - 添加额外的IP检测URL",
+      "params": {
+        "testUrls": [
+          "https://api.ipify.org?format=json",
+          "https://httpbin.org/ip",
+          "https://checkip.amazonaws.com"
+        ]
+      }
+    },
+    "withHeaders": {
+      "description": "包含响应头信息 - 获取详细的HTTP响应头",
+      "params": {
+        "includeHeaders": true
+      }
+    },
+    "comprehensive": {
+      "description": "全面检测 - 使用自定义URL并包含响应头",
+      "params": {
+        "testUrls": [
+          "https://api.ipify.org?format=json",
+          "https://httpbin.org/ip",
+          "https://api.myip.com",
+          "https://ipapi.co/json/",
+          "https://checkip.amazonaws.com",
+          "https://icanhazip.com",
+          "https://ident.me"
+        ],
+        "includeHeaders": true
+      }
+    }
+  },
+  "defaultParams": {
+    "includeHeaders": false
+  },
+  "notes": [
+    "默认情况下会使用多个知名的IP检测服务",
+    "建议在生产环境中多次运行以获取完整的IP池信息",
+    "检测到的IP地址应该添加到领星ERP等第三方服务的白名单中",
+    "如果某些检测服务不可用，函数会继续使用其他可用的服务",
+    "includeHeaders参数会增加响应数据量，仅在需要调试时使用"
+  ]
+}

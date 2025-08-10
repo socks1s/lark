@@ -1,0 +1,70 @@
+{
+  "apiID": "package_facdb4__c__function_0r3vfgq8w1ns4",
+  "apiName": "versionConflictCheck",
+  "label": {
+    "zh_CN": "编辑版本冲突检测",
+    "en_US": "versionConflictCheck"
+  },
+  "description": {
+    "zh_CN": "验证记录版本号是否与最新版本一致，防止并发修改冲突",
+    "en_US": "Validate if record version matches the latest version to prevent concurrent modification conflicts"
+  },
+  "longTaskMode": false,
+  "frontendSDKInvokable": true,
+  "input": [
+    {
+      "key": "objectApiName",
+      "type": "Text",
+      "required": true,
+      "label": "对象API名称",
+      "description": "记录所属对象的API名称"
+    },
+    {
+      "key": "record",
+      "type": "JSON",
+      "label": "record",
+      "required": false,
+      "description": ""
+    }
+  ],
+  "output": [
+    {
+      "key": "isValid",
+      "type": "Boolean",
+      "required": true,
+      "label": "是否有效",
+      "description": "版本验证是否通过"
+    },
+    {
+      "key": "message",
+      "type": "Text",
+      "required": true,
+      "label": "验证消息",
+      "description": "验证结果的详细消息"
+    },
+    {
+      "key": "versionInfo",
+      "type": "JSON",
+      "required": false,
+      "label": "版本信息",
+      "description": "包含最新版本信息的对象",
+      "properties": {
+        "latestUpdatedBy": {
+          "type": "Text",
+          "label": "最后更新人",
+          "description": "最后更新记录的用户"
+        },
+        "latestUpdatedAt": {
+          "type": "DateTime",
+          "label": "最后更新时间",
+          "description": "记录的最后更新时间"
+        },
+        "latestRecordId": {
+          "type": "BigInt",
+          "label": "最新记录ID",
+          "description": "数据库中的最新记录ID"
+        }
+      }
+    }
+  ]
+}

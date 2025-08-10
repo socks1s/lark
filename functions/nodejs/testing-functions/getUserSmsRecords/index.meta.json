@@ -1,0 +1,53 @@
+{
+  "apiID": "function_getusersmsrecords",
+  "apiName": "getUserSmsRecords",
+  "label": {
+    "zh_CN": "获取用户SMS记录",
+    "en_US": "Get User SMS Records"
+  },
+  "description": {
+    "zh_CN": "根据当前用户在otpAuth中的权限，查询并返回用户有权限访问的SMS记录，支持分页查询",
+    "en_US": "Query and return SMS records that the current user has permission to access based on otpAuth permissions, with pagination support"
+  },
+  "longTaskMode": false,
+  "frontendSDKInvokable": true,
+  "input": [
+    {
+      "key": "page",
+      "label": "页码",
+      "description": "页码，从1开始，默认为1",
+      "type": "Number",
+      "required": false
+    },
+    {
+      "key": "pageSize",
+      "label": "每页记录数",
+      "description": "每页返回的记录数量，默认为20，最大100",
+      "type": "Number",
+      "required": false
+    }
+  ],
+  "output": [
+    {
+      "key": "success",
+      "type": "Boolean",
+      "label": "执行状态",
+      "required": true,
+      "description": "函数执行是否成功"
+    },
+    {
+      "key": "data",
+      "type": "JSON",
+      "label": "返回数据",
+      "required": false,
+      "description": "包含SMS记录、分页信息和统计信息的数据对象"
+    },
+    {
+      "key": "error",
+      "type": "Text",
+      "label": "错误信息",
+      "required": false,
+      "description": "执行失败时的错误信息"
+    }
+  ]
+}

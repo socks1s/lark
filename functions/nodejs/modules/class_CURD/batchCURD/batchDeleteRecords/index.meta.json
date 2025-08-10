@@ -1,0 +1,110 @@
+{
+  "apiID": "package_facdb4__c__function_t2slx2za3vyzk",
+  "apiName": "batchDeleteRecords",
+  "label": {
+    "zh_CN": "批量删除记录",
+    "en_US": "Batch Delete Records"
+  },
+  "description": {
+    "zh_CN": "批量删除指定数据表的记录，支持分批处理和错误记录统计",
+    "en_US": "Batch delete records from specified object with batch processing and error statistics"
+  },
+  "longTaskMode": false,
+  "frontendSDKInvokable": true,
+  "input": [
+    {
+      "key": "objectApiName",
+      "type": "Text",
+      "required": true,
+      "label": "数据表名称",
+      "description": "需要删除记录的数据表API名称"
+    },
+    {
+      "key": "recordList",
+      "type": "JSON",
+      "required": true,
+      "label": "记录列表",
+      "description": "需要删除的记录数组，每个元素必须包含_id字段"
+    }
+  ],
+  "output": [
+    {
+      "key": "totalCount",
+      "type": "Number",
+      "required": true,
+      "label": "总记录数",
+      "description": "尝试删除的总记录数"
+    },
+    {
+      "key": "invalidCount",
+      "type": "Number",
+      "required": true,
+      "label": "无效记录数",
+      "description": "无效的记录数"
+    },
+    {
+      "key": "validCount",
+      "type": "Number",
+      "required": true,
+      "label": "有效记录数",
+      "description": "有效的记录数"
+    },
+    {
+      "key": "deleteSuccessCount",
+      "type": "Number",
+      "required": true,
+      "label": "删除成功数",
+      "description": "成功删除的记录数"
+    },
+    {
+      "key": "deleteFailCount",
+      "type": "Number",
+      "required": true,
+      "label": "删除失败数",
+      "description": "删除失败的记录数"
+    },
+    {
+      "key": "invalidList",
+      "type": "List",
+      "required": true,
+      "label": "无效记录列表",
+      "description": "无效的记录ID列表",
+      "listItem": {
+        "type": "Text"
+      }
+    },
+    {
+      "key": "deleteSuccessList",
+      "type": "List",
+      "required": true,
+      "label": "删除成功列表",
+      "description": "成功删除的记录ID列表",
+      "listItem": {
+        "type": "Text"
+      }
+    },
+    {
+      "key": "deleteFailList",
+      "type": "List",
+      "required": true,
+      "label": "删除失败列表",
+      "description": "删除失败的记录ID和原因",
+      "listItem": {
+        "type": "Map",
+        "mapKey": {
+          "type": "Text"
+        },
+        "mapValue": {
+          "type": "Text"
+        }
+      }
+    },
+    {
+      "key": "fullSuccess",
+      "type": "Boolean",
+      "required": true,
+      "label": "fullSuccess",
+      "description": "批量删除是否全部成功"
+    }
+  ]
+}

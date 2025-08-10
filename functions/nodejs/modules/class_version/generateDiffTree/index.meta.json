@@ -1,0 +1,75 @@
+{
+  "apiID": "function_generateDiffTree",
+  "apiName": "generateDiffTree",
+  "label": "差异树生成器",
+  "description": "比较两个数据对象的差异，生成详细的差异树结构，支持对象、数组、基础类型的深度比较",
+  "longTaskMode": false,
+  "frontendSDKInvokable": true,
+  "input": [
+    {
+      "key": "oldData",
+      "type": "JSON",
+      "label": "原始数据",
+      "required": true,
+      "description": "变更前的原始数据，可以是对象、数组或基础类型"
+    },
+    {
+      "key": "newData",
+      "type": "JSON",
+      "label": "新数据",
+      "required": true,
+      "description": "变更后的新数据，可以是对象、数组或基础类型"
+    },
+    {
+      "key": "ignoreFields",
+      "type": "JSON",
+      "label": "忽略字段",
+      "required": false,
+      "description": "需要忽略的字段路径数组，如 [\"lastUpdateTime\", \"metadata.timestamp\"]"
+    },
+    {
+      "key": "options",
+      "type": "JSON",
+      "label": "配置选项",
+      "required": false,
+      "description": "配置选项对象，包含maxStringLength、arrayOptimization、stringComparison等参数"
+    }
+  ],
+  "output": [
+    {
+      "key": "success",
+      "type": "Boolean",
+      "required": true,
+      "label": "执行状态",
+      "description": "函数执行是否成功"
+    },
+    {
+      "key": "tree",
+      "type": "JSON",
+      "required": true,
+      "label": "差异树",
+      "description": "生成的差异树结构，包含所有节点的状态和变更信息"
+    },
+    {
+      "key": "statistics",
+      "type": "JSON",
+      "required": true,
+      "label": "统计信息",
+      "description": "差异统计信息，包含总数、未变更、修改、新增、删除、忽略的节点数量"
+    },
+    {
+      "key": "metadata",
+      "type": "JSON",
+      "required": true,
+      "label": "元数据",
+      "description": "处理元数据，包含版本、时间戳、处理时间等信息"
+    },
+    {
+      "key": "diagnostics",
+      "type": "JSON",
+      "required": false,
+      "label": "诊断信息",
+      "description": "诊断信息，包含错误和警告信息"
+    }
+  ]
+}

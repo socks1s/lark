@@ -1,0 +1,47 @@
+{
+  "apiID": "package_facdb4__c__function_aadiooddsfqas",
+  "apiName": "prepareDeleteIdList",
+  "label": {
+    "zh_CN": "prepareDeleteIdList",
+    "en_US": ""
+  },
+  "description": {
+    "zh_CN": "prepareDeleteIdList",
+    "en_US": ""
+  },
+  "longTaskMode": false,
+  "frontendSDKInvokable": false,
+  "input": [
+    {
+      "key": "oldList",
+      "type": "List",
+      "label": "oldList",
+      "required": false,
+      "description": "",
+      "listItem": {
+        "type": "BigInt"
+      }
+    },
+    {
+      "key": "newList",
+      "type": "List",
+      "label": "newList",
+      "required": false,
+      "description": "",
+      "listItem": {
+        "type": "BigInt"
+      }
+    }
+  ],
+  "output": [
+    {
+      "key": "delList",
+      "type": "List",
+      "label": "delList",
+      "description": "",
+      "listItem": {
+        "type": "BigInt"
+      }
+    }
+  ]
+}

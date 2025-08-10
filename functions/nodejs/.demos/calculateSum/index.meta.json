@@ -1,0 +1,38 @@
+{
+  "apiID": "package_facdb4__c__function_39bvsrx354tbk",
+  "apiName": "calculateSum",
+  "label": {
+    "zh_CN": "计算两数之和",
+    "en_US": "Calculate Sum"
+  },
+  "description": {
+    "zh_CN": "计算两个数字a和b的和，并返回结果",
+    "en_US": "Calculate the sum of two numbers a and b and return the result"
+  },
+  "longTaskMode": false,
+  "frontendSDKInvokable": true,
+  "input": [
+    {
+      "key": "a",
+      "type": "Number",
+      "required": true,
+      "label": "数字a",
+      "description": "第一个加数"
+    },
+    {
+      "key": "b",
+      "type": "Number",
+      "required": true,
+      "label": "数字b",
+      "description": "第二个加数"
+    }
+  ],
+  "output": [
+    {
+      "key": "sum",
+      "type": "Number",
+      "label": "和",
+      "description": "两个数字的和"
+    }
+  ]
+}

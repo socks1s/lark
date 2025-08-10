@@ -1,0 +1,29 @@
+{
+  "params": {
+    "oldData": {
+      "user": {
+        "name": "张三",
+        "age": 25,
+        "skills": ["JavaScript", "Python"],
+        "active": true
+      },
+      "settings": {
+        "theme": "dark",
+        "notifications": true
+      }
+    },
+    "newData": {
+      "user": {
+        "name": "张三",
+        "age": 26,
+        "skills": ["JavaScript", "Python", "React"],
+        "active": true
+      },
+      "settings": {
+        "theme": "light",
+        "notifications": true
+      }
+    }
+  },
+  "context": {}
+}
