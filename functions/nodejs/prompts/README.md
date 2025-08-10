@@ -13,6 +13,7 @@
 
 #### 源代码管理流程
 - **[AE Source Push工作流程](workflow/source-code-management/ae-source-push-workflow.md)** - ae source push 源代码推送的安全流程指南，包含推送前检查、错误处理、安全注意事项和完整的操作步骤
+- **[GitHub推送完整指南](workflow/source-code-management/github-push-complete-guide.md)** - 将飞书低代码项目推送到GitHub的完整流程指南，包括初始化、冲突解决、认证配置、仓库管理等所有关键步骤和问题解决方案
 
 #### 文档管理流程
 - **[AI文档写作工作流程](./workflow/documentation-management/ai-documentation-writing-workflow.md)** - AI助手进行技术文档写作的完整工作流程，遵循原子化原则，确保文档结构清晰、内容准确、易于维护
