@@ -286,7 +286,7 @@ Closes #123
 - [AE Source Push工作流程](./ae-source-push-workflow.md) - 飞书低代码平台的源代码推送流程
 - [文档链接路径标准](../../knowledge-base/documentation-standards/documentation-link-path-standards.md) - 文档中链接的规范格式
 
-## 📞 故障排除
+## 📞 故障排除 
 
 ### 获取帮助的方式
 1. **查看Git日志**：使用 `git log` 查看详细的操作历史
